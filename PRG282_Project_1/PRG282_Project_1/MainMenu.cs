@@ -53,5 +53,10 @@ namespace PRG282_Project_1
         {
 
         }
+
+        private void label11_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -10,3 +10,15 @@ C:\Users\leand\source\repos\PRG-282-Project-1\PRG282_Project_1\PRG282_Project_1\
 C:\Users\leand\source\repos\PRG-282-Project-1\PRG282_Project_1\PRG282_Project_1\obj\Debug\PRG282_Project_1.exe
 C:\Users\leand\source\repos\PRG-282-Project-1\PRG282_Project_1\PRG282_Project_1\obj\Debug\PRG282_Project_1.pdb
 C:\Users\leand\source\repos\PRG-282-Project-1\PRG282_Project_1\PRG282_Project_1\obj\Debug\PRG282_Project_1.MainMenu.resources
+C:\Belgium\Year 2\PRG282\PRG-281-Project-1\PRG282_Project_1\PRG282_Project_1\bin\Debug\PRG282_Project_1.exe.config
+C:\Belgium\Year 2\PRG282\PRG-281-Project-1\PRG282_Project_1\PRG282_Project_1\bin\Debug\PRG282_Project_1.exe
+C:\Belgium\Year 2\PRG282\PRG-281-Project-1\PRG282_Project_1\PRG282_Project_1\bin\Debug\PRG282_Project_1.pdb
+C:\Belgium\Year 2\PRG282\PRG-281-Project-1\PRG282_Project_1\PRG282_Project_1\obj\Debug\PRG282_Project_1.csproj.AssemblyReference.cache
+C:\Belgium\Year 2\PRG282\PRG-281-Project-1\PRG282_Project_1\PRG282_Project_1\obj\Debug\PRG282_Project_1.csproj.SuggestedBindingRedirects.cache
+C:\Belgium\Year 2\PRG282\PRG-281-Project-1\PRG282_Project_1\PRG282_Project_1\obj\Debug\PRG282_Project_1.frmLogin.resources
+C:\Belgium\Year 2\PRG282\PRG-281-Project-1\PRG282_Project_1\PRG282_Project_1\obj\Debug\PRG282_Project_1.MainMenu.resources
+C:\Belgium\Year 2\PRG282\PRG-281-Project-1\PRG282_Project_1\PRG282_Project_1\obj\Debug\PRG282_Project_1.Properties.Resources.resources
+C:\Belgium\Year 2\PRG282\PRG-281-Project-1\PRG282_Project_1\PRG282_Project_1\obj\Debug\PRG282_Project_1.csproj.GenerateResource.cache
+C:\Belgium\Year 2\PRG282\PRG-281-Project-1\PRG282_Project_1\PRG282_Project_1\obj\Debug\PRG282_Project_1.csproj.CoreCompileInputs.cache
+C:\Belgium\Year 2\PRG282\PRG-281-Project-1\PRG282_Project_1\PRG282_Project_1\obj\Debug\PRG282_Project_1.exe
+C:\Belgium\Year 2\PRG282\PRG-281-Project-1\PRG282_Project_1\PRG282_Project_1\obj\Debug\PRG282_Project_1.pdb

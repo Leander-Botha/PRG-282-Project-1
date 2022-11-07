@@ -43,28 +43,35 @@ namespace PRG282_Project_1
             FileHandler fileHandler = new FileHandler();
             List<User> userList = fileHandler.Read();
             bool registrationStatus = false;
-
-            foreach (var user in userList)
+            if (userList != null)
             {
-                if (user.Username.Equals(username))
+                foreach (var user in userList)
                 {
-                    registrationStatus = true;
-                    break;
+                    if (user.Username.Equals(username))
+                    {
+                        registrationStatus = true;
+                        break;
+                    }
+                    else
+                    {
+                        registrationStatus = false;
+                    }
+                }
+
+                if (registrationStatus == true)
+                {
+                    return true;
                 }
                 else
                 {
-                    registrationStatus = false;
+                    return false;
                 }
-            }
-
-            if (registrationStatus == true)
-            {
-                return true;
             }
             else
             {
                 return false;
             }
+            
         }
 
 

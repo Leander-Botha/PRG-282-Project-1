@@ -66,7 +66,9 @@ namespace PRG282_Project_1
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
-            Environment.Exit(0);
+            this.Hide();
+            FrmMainMenu mm = new FrmMainMenu();
+            mm.Show();
         }
     }
 }

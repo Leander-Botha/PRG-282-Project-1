@@ -10,53 +10,35 @@ using System.Windows.Forms;
 
 namespace PRG282_Project_1
 {
-    public partial class MainMenu : Form
+    public partial class FrmMainMenu : Form
     {
-        public MainMenu()
+        public FrmMainMenu()
         {
             InitializeComponent();
         }
 
-        //****Example to add to DB
-        //DataTable checkUser = new DataTable();
-        //checkUser = this.myDatabase.executeSqlCommand("SELECT * FROM tblEmployee WHERE employeeID='" + txtEmpID.Text + "' ");
-        //    if (checkUser.Rows.Count > 0)
-        //    {
-        //        MessageBox.Show("The EmployeeID is duplicated", "Warning");
-        //    }
-        //    else
-        //    {
-        //        //Insert data into database
-        //        this.myDatabase.executeSqlCommand("INSERT INTO tblEmployee ([employeeID],[employeeEmail],[employeePassword],[employeeFirstName],[employeeLastName],[employeeLevel],[employeePhoneNumber]) VALUES('" + int.Parse(txtEmpID.Text) + "','" + txtEmail.Text + "','" + txtPass.Text + "','" + txtFName.Text + "','" + txtLName.Text + "','" + txtLevel.Text + "','" + txtPhone.Text + "')");
-        //MessageBox.Show("The user is saved");
-        //load_userAccount();
-        //}
-
-
-        //****Example to update record in DB
-        // update user information
-        //string sqlcommand = "UPDATE tblEmployee SET employeeEmail='" + txtEmail.Text + "', employeePassword='" + txtPass.Text + "', employeeFirstName='" + txtFName.Text + "', employeeLastName='" + txtLName.Text + "', employeePhoneNumber='" + txtPhone.Text + "' WHERE employeeID='" + txtEmpID.Text + "' ";
-        //this.myDatabase.executeSqlCommand(sqlcommand);
-        //MessageBox.Show("The user info is updated", "Warning");
-
-
-        //****Example to delete record in DB
-        //if (MessageBox.Show("Do you want to delete the user?", "Warnning", MessageBoxButtons.YesNo) == DialogResult.Yes)
-        //    {
-        //      string sqlcommand = "DELETE FROM tblEmployee WHERE employeeID='" + txtEmpID.Text + "'";
-        //      this.myDatabase.executeSqlCommand(sqlcommand);
-        //      MessageBox.Show("The user is deleted");
-        //    }
-
-
-    private void MainMenu_Load(object sender, EventArgs e)
+        private void label10_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void label11_Click(object sender, EventArgs e)
+        private void btnStudentInfoManager_Click(object sender, EventArgs e)
         {
+            this.Hide();
+            FrmStudentInformation fsi = new FrmStudentInformation();
+            fsi.ShowDialog();
+        }
 
+        private void btnModuleInfoManager_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FrmModuleInformation fmi = new FrmModuleInformation();
+            fmi.ShowDialog();
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            Environment.Exit(0);
         }
     }
 }

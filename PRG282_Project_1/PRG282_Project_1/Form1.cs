@@ -34,7 +34,7 @@ namespace PRG282_Project_1
 
             if (loginValidation.Validate(username,password) == true)
             {
-                MainMenu mainMenu = new MainMenu();
+                FrmMainMenu mainMenu = new FrmMainMenu();
                 MessageBox.Show("Login Successful !", "Login Validation");
                 this.Hide();
                 mainMenu.Show();

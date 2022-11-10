@@ -50,3 +50,19 @@ C:\Users\suned\Source\Repos\Leander-Botha\PRG-282-Project-1\PRG282_Project_1\PRG
 C:\Users\suned\Source\Repos\Leander-Botha\PRG-282-Project-1\PRG282_Project_1\PRG282_Project_1\obj\Debug\PRG282_Project_1.csproj.CoreCompileInputs.cache
 C:\Users\suned\Source\Repos\Leander-Botha\PRG-282-Project-1\PRG282_Project_1\PRG282_Project_1\obj\Debug\PRG282_Project_1.exe
 C:\Users\suned\Source\Repos\Leander-Botha\PRG-282-Project-1\PRG282_Project_1\PRG282_Project_1\obj\Debug\PRG282_Project_1.pdb
+C:\PRG282 code\PROJECT\Leander-Botha\PRG-282-Project-1\PRG282_Project_1\PRG282_Project_1\obj\Debug\PRG282_Project_1.csproj.AssemblyReference.cache
+C:\PRG282 code\PROJECT\Leander-Botha\PRG-282-Project-1\PRG282_Project_1\PRG282_Project_1\obj\Debug\PRG282_Project_1.csproj.SuggestedBindingRedirects.cache
+C:\PRG282 code\PROJECT\Leander-Botha\PRG-282-Project-1\PRG282_Project_1\PRG282_Project_1\obj\Debug\PRG282_Project_1.frmLogin.resources
+C:\PRG282 code\PROJECT\Leander-Botha\PRG-282-Project-1\PRG282_Project_1\PRG282_Project_1\obj\Debug\PRG282_Project_1.FrmMainMenu.resources
+C:\PRG282 code\PROJECT\Leander-Botha\PRG-282-Project-1\PRG282_Project_1\PRG282_Project_1\obj\Debug\PRG282_Project_1.FrmModuleInformation.resources
+C:\PRG282 code\PROJECT\Leander-Botha\PRG-282-Project-1\PRG282_Project_1\PRG282_Project_1\obj\Debug\PRG282_Project_1.FrmStudentInformation.resources
+C:\PRG282 code\PROJECT\Leander-Botha\PRG-282-Project-1\PRG282_Project_1\PRG282_Project_1\obj\Debug\PRG282_Project_1.Properties.Resources.resources
+C:\PRG282 code\PROJECT\Leander-Botha\PRG-282-Project-1\PRG282_Project_1\PRG282_Project_1\obj\Debug\PRG282_Project_1.csproj.GenerateResource.cache
+C:\PRG282 code\PROJECT\Leander-Botha\PRG-282-Project-1\PRG282_Project_1\PRG282_Project_1\obj\Debug\PRG282_Project_1.csproj.CoreCompileInputs.cache
+C:\PRG282 code\PROJECT\Leander-Botha\PRG-282-Project-1\PRG282_Project_1\PRG282_Project_1\obj\Debug\PRG282_Project_1.exe
+C:\PRG282 code\PROJECT\Leander-Botha\PRG-282-Project-1\PRG282_Project_1\PRG282_Project_1\obj\Debug\PRG282_Project_1.pdb
+C:\PRG282 code\PROJECT\Leander-Botha\PRG-282-Project-1\PRG282_Project_1\PRG282_Project_1\bin\Debug\DB\BelgiumCampusDB.mdf
+C:\PRG282 code\PROJECT\Leander-Botha\PRG-282-Project-1\PRG282_Project_1\PRG282_Project_1\bin\Debug\DB\BelgiumCampusDB_log.ldf
+C:\PRG282 code\PROJECT\Leander-Botha\PRG-282-Project-1\PRG282_Project_1\PRG282_Project_1\bin\Debug\PRG282_Project_1.exe.config
+C:\PRG282 code\PROJECT\Leander-Botha\PRG-282-Project-1\PRG282_Project_1\PRG282_Project_1\bin\Debug\PRG282_Project_1.exe
+C:\PRG282 code\PROJECT\Leander-Botha\PRG-282-Project-1\PRG282_Project_1\PRG282_Project_1\bin\Debug\PRG282_Project_1.pdb

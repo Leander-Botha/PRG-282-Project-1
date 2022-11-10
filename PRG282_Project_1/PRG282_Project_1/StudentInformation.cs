@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PRG282_Project_1.DB;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -69,6 +70,16 @@ namespace PRG282_Project_1
             this.Hide();
             FrmMainMenu mm = new FrmMainMenu();
             mm.Show();
+        }
+
+        private void btnRead_Click(object sender, EventArgs e)
+        {
+            DBConnection dbc = new DBConnection();
+            string command = "select * from tblStudent";
+
+            DataTable studentDT = dbc.executeSqlCommand(command);
+
+            dgvInfo.DataSource = studentDT;
         }
     }
 }

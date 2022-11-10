@@ -86,6 +86,7 @@
             this.Controls.Add(this.btnStudentInfoManager);
             this.Controls.Add(this.label10);
             this.Name = "FrmMainMenu";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Main Menu";
             this.ResumeLayout(false);
             this.PerformLayout();

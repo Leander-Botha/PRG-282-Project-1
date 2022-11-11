@@ -6,6 +6,8 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
+using System.Drawing;
 
 namespace PRG282_Project_1.DB
 {
@@ -52,6 +54,24 @@ namespace PRG282_Project_1.DB
                 dtTable = null;
             }
             return dtTable;
+        }
+
+        public DataTable Search(int studentNumber) 
+        { 
+            string searchQuery = $"select * from [tblStudent] where studentNumber = '{studentNumber}'";
+            return executeSqlCommand(searchQuery);    
+        }
+
+        public DataTable DisplayAll()
+        {
+            string searchQuery = $"select * from [tblStudent]";
+            return executeSqlCommand(searchQuery);
+        }
+
+        public DataTable Create(int studentNumber, string studentFirstName, string studentSurname, DateTime studentDOB, Image studentImage, string studentPhone, string studentAddress, string studentGender)
+        {
+            string createQuery = $"INSERT INTO tblStudent VALUES('{studentNumber}','{studentFirstName}','{studentSurname}','{studentDOB}','{studentImage}','{studentPhone}','{studentAddress}','{studentGender}',";
+            return executeSqlCommand(createQuery);
         }
     }
 }

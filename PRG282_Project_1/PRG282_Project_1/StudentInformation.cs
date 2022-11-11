@@ -13,6 +13,7 @@ namespace PRG282_Project_1
 {
     public partial class FrmStudentInformation : Form
     {
+        DBConnection dbc;
         public FrmStudentInformation()
         {
             InitializeComponent();
@@ -52,7 +53,8 @@ namespace PRG282_Project_1
 
     private void MainMenu_Load(object sender, EventArgs e)
         {
-
+            dbc = new DBConnection();
+            dgvInfo.DataSource = dbc.DisplayAll();
         }
 
         private void label11_Click(object sender, EventArgs e)
@@ -74,12 +76,52 @@ namespace PRG282_Project_1
 
         private void btnRead_Click(object sender, EventArgs e)
         {
-            DBConnection dbc = new DBConnection();
-            string command = "select * from tblStudent";
+            try
+            {
+                dgvInfo.DataSource = dbc.DisplayAll();
 
-            DataTable studentDT = dbc.executeSqlCommand(command);
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show(err.Message);
+            }
+        }
 
-            dgvInfo.DataSource = studentDT;
+        private void btnCreate_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                dbc.Create(int.Parse(txtStudentNr.Text),txtName.Text, txtSurname.Text, dtpStudent.Value.Date, picStudent.Image,txtPhone.Text,txtAddress.Text,cbxGender.Text);
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show(err.Message);
+            }
+        }
+
+        private void txtSearch_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                dgvInfo.DataSource = dbc.DisplayAll();
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show(err.Message);
+            }
+        }
+
+        private void btnSearchStudent_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                dgvInfo.DataSource = dbc.Search(int.Parse(txtSearch.Text));
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show(err.Message);
+
+            }
         }
     }
 }

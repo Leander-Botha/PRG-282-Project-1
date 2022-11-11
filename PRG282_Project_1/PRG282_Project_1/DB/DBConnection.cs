@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Linq;
 using System.Drawing;
+using System.Windows.Forms;
 
 namespace PRG282_Project_1.DB
 {
@@ -58,20 +59,36 @@ namespace PRG282_Project_1.DB
 
         public DataTable Search(int studentNumber) 
         { 
-            string searchQuery = $"select * from [tblStudent] where studentNumber = '{studentNumber}'";
+            string searchQuery = $"select * from tblStudent where studentNumber = '{studentNumber}'";
             return executeSqlCommand(searchQuery);    
         }
 
         public DataTable DisplayAll()
         {
-            string searchQuery = $"select * from [tblStudent]";
+            string searchQuery = $"select * from tblStudent";
             return executeSqlCommand(searchQuery);
         }
 
-        public DataTable Create(int studentNumber, string studentFirstName, string studentSurname, DateTime studentDOB, Object studentImage, string studentPhone, string studentAddress, string studentGender)
+        public void Create(int studentNumber, string studentFirstName, string studentSurname, string studentDOB, object studentImage, string studentPhone, string studentAddress, string studentGender)
         {
-            string createQuery = $"INSERT INTO [tblStudent] VALUES('{studentNumber}','{studentFirstName}','{studentSurname}','{studentDOB}','{studentImage}','{studentPhone}','{studentAddress}','{studentGender}'";
-            return executeSqlCommand(createQuery);
+            //string createQuery = $"INSERT INTO tblStudent VALUES('{studentNumber}','{studentFirstName}','{studentSurname}','{studentDOB}','{studentImage}','{studentPhone}','{studentAddress}','{studentGender}')";
+            string createQuery = "INSERT INTO tblStudent VALUES(@studentNumber,@studentFirstName,@studentSurname,@studentDOB,@studentImage,@studentPhone,@studentAddress,@studentGender)";
+            //return executeSqlCommand(createQuery);
+
+            SqlCommand cmd = new SqlCommand(createQuery, this.Sqlcon);
+            
+                Sqlcon.Open();
+                cmd.Parameters.AddWithValue("@studentNumber", studentNumber);
+                cmd.Parameters.AddWithValue("@studentFirstName", studentFirstName);
+                cmd.Parameters.AddWithValue("@studentSurname", studentSurname);
+                cmd.Parameters.AddWithValue("@studentDOB", studentDOB);
+                cmd.Parameters.AddWithValue("@studentImage", studentImage);
+                cmd.Parameters.AddWithValue("@studentPhone", studentPhone);
+                cmd.Parameters.AddWithValue("@studentAddress", studentAddress);
+                cmd.Parameters.AddWithValue("@studentGender", studentGender);
+                cmd.ExecuteNonQuery();
+                Sqlcon.Close();
+            
         }
     }
 }

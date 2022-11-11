@@ -32,7 +32,7 @@
             this.pnlStudentData = new System.Windows.Forms.Panel();
             this.btnRead = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cbxModules = new System.Windows.Forms.ComboBox();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.picStudent = new System.Windows.Forms.PictureBox();
             this.txtName = new System.Windows.Forms.TextBox();
@@ -70,7 +70,7 @@
             this.pnlStudentData.BackColor = System.Drawing.Color.WhiteSmoke;
             this.pnlStudentData.Controls.Add(this.btnRead);
             this.pnlStudentData.Controls.Add(this.btnDelete);
-            this.pnlStudentData.Controls.Add(this.comboBox1);
+            this.pnlStudentData.Controls.Add(this.cbxModules);
             this.pnlStudentData.Controls.Add(this.btnUpdate);
             this.pnlStudentData.Controls.Add(this.picStudent);
             this.pnlStudentData.Controls.Add(this.txtName);
@@ -114,16 +114,15 @@
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = true;
             // 
-            // comboBox1
+            // cbxModules
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Male",
-            "Female"});
-            this.comboBox1.Location = new System.Drawing.Point(164, 441);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(100, 21);
-            this.comboBox1.TabIndex = 18;
+            this.cbxModules.FormattingEnabled = true;
+            this.cbxModules.Items.AddRange(new object[] {
+            "None"});
+            this.cbxModules.Location = new System.Drawing.Point(164, 441);
+            this.cbxModules.Name = "cbxModules";
+            this.cbxModules.Size = new System.Drawing.Size(100, 21);
+            this.cbxModules.TabIndex = 18;
             // 
             // btnUpdate
             // 
@@ -166,10 +165,12 @@
             // 
             // dtpStudent
             // 
+            this.dtpStudent.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpStudent.Location = new System.Drawing.Point(164, 244);
             this.dtpStudent.Name = "dtpStudent";
-            this.dtpStudent.Size = new System.Drawing.Size(100, 20);
+            this.dtpStudent.Size = new System.Drawing.Size(183, 20);
             this.dtpStudent.TabIndex = 18;
+            this.dtpStudent.Value = new System.DateTime(2022, 11, 18, 0, 0, 0, 0);
             // 
             // btnCreate
             // 
@@ -415,7 +416,7 @@
         private System.Windows.Forms.PictureBox picStudent;
         private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cbxModules;
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Button btnCreate;
         private System.Windows.Forms.Label label10;

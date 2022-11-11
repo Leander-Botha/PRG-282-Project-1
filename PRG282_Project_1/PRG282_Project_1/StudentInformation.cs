@@ -91,9 +91,12 @@ namespace PRG282_Project_1
         {
             try
             {
-                var image = new ImageConverter().ConvertTo(picStudent.Image, typeof(Byte[]));
-                dgvInfo.DataSource = dbc.Create(int.Parse(txtStudentNr.Text), txtName.Text, txtSurname.Text, dtpStudent.Value.Date, image, txtPhone.Text, txtAddress.Text, cbxGender.Text);
+                var image = new ImageConverter().ConvertTo(picStudent.Image, typeof(byte[]));
+
+                
+                dbc.Create(int.Parse(txtStudentNr.Text), txtName.Text, txtSurname.Text, dtpStudent.Text, image, txtPhone.Text,txtAddress.Text,cbxGender.Text);
                 MessageBox.Show("Student sucessfully created");
+                dgvInfo.DataSource = dbc.DisplayAll();
 
             }
             catch (Exception err)

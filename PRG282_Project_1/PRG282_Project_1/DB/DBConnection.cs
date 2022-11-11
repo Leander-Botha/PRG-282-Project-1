@@ -68,9 +68,9 @@ namespace PRG282_Project_1.DB
             return executeSqlCommand(searchQuery);
         }
 
-        public DataTable Create(int studentNumber, string studentFirstName, string studentSurname, DateTime studentDOB, Image studentImage, string studentPhone, string studentAddress, string studentGender)
+        public DataTable Create(int studentNumber, string studentFirstName, string studentSurname, DateTime studentDOB, Object studentImage, string studentPhone, string studentAddress, string studentGender)
         {
-            string createQuery = $"INSERT INTO tblStudent VALUES('{studentNumber}','{studentFirstName}','{studentSurname}','{studentDOB}','{studentImage}','{studentPhone}','{studentAddress}','{studentGender}',";
+            string createQuery = $"INSERT INTO [tblStudent] VALUES('{studentNumber}','{studentFirstName}','{studentSurname}','{studentDOB}','{studentImage}','{studentPhone}','{studentAddress}','{studentGender}'";
             return executeSqlCommand(createQuery);
         }
     }

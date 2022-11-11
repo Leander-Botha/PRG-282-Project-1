@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmStudentInformation));
             this.pnlStudentData = new System.Windows.Forms.Panel();
             this.btnRead = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
@@ -135,11 +136,16 @@
             // 
             // picStudent
             // 
+            this.picStudent.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.picStudent.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picStudent.Image = ((System.Drawing.Image)(resources.GetObject("picStudent.Image")));
             this.picStudent.Location = new System.Drawing.Point(154, 152);
             this.picStudent.Name = "picStudent";
-            this.picStudent.Size = new System.Drawing.Size(119, 60);
+            this.picStudent.Size = new System.Drawing.Size(124, 76);
+            this.picStudent.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picStudent.TabIndex = 21;
             this.picStudent.TabStop = false;
+            this.picStudent.Click += new System.EventHandler(this.picStudent_Click);
             // 
             // txtName
             // 

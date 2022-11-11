@@ -91,7 +91,10 @@ namespace PRG282_Project_1
         {
             try
             {
-                dbc.Create(int.Parse(txtStudentNr.Text),txtName.Text, txtSurname.Text, dtpStudent.Value.Date, picStudent.Image,txtPhone.Text,txtAddress.Text,cbxGender.Text);
+                var image = new ImageConverter().ConvertTo(picStudent.Image, typeof(Byte[]));
+                dgvInfo.DataSource = dbc.Create(int.Parse(txtStudentNr.Text), txtName.Text, txtSurname.Text, dtpStudent.Value.Date, image, txtPhone.Text, txtAddress.Text, cbxGender.Text);
+                MessageBox.Show("Student sucessfully created");
+
             }
             catch (Exception err)
             {
@@ -121,6 +124,16 @@ namespace PRG282_Project_1
             {
                 MessageBox.Show(err.Message);
 
+            }
+        }
+
+        private void picStudent_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "Supported Images |*jpg|*jpeg|*png";
+            if (openFileDialog.ShowDialog() == DialogResult.OK) 
+            { 
+                picStudent.Image = new Bitmap(openFileDialog.FileName);
             }
         }
     }

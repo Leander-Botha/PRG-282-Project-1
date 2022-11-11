@@ -55,9 +55,12 @@
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.btnSearchModule = new System.Windows.Forms.Button();
             this.dgvinfoModules = new System.Windows.Forms.DataGridView();
+            this.btnRemoveLink = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.pnlStudentData.SuspendLayout();
             this.pnlSearch.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvinfoModules)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label10
@@ -74,15 +77,12 @@
             // pnlStudentData
             // 
             this.pnlStudentData.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.pnlStudentData.Controls.Add(this.btnAddLInk);
-            this.pnlStudentData.Controls.Add(this.txtLinks);
-            this.pnlStudentData.Controls.Add(this.lbDisplayLinks);
+            this.pnlStudentData.Controls.Add(this.groupBox1);
             this.pnlStudentData.Controls.Add(this.txtCredits);
             this.pnlStudentData.Controls.Add(this.txtNQFlevel);
             this.pnlStudentData.Controls.Add(this.label6);
             this.pnlStudentData.Controls.Add(this.label5);
             this.pnlStudentData.Controls.Add(this.btnRead);
-            this.pnlStudentData.Controls.Add(this.label3);
             this.pnlStudentData.Controls.Add(this.btnDeleteModule);
             this.pnlStudentData.Controls.Add(this.btnUpdateModule);
             this.pnlStudentData.Controls.Add(this.txtModuleName);
@@ -95,37 +95,44 @@
             this.pnlStudentData.Location = new System.Drawing.Point(33, 93);
             this.pnlStudentData.Margin = new System.Windows.Forms.Padding(6);
             this.pnlStudentData.Name = "pnlStudentData";
-            this.pnlStudentData.Size = new System.Drawing.Size(764, 749);
+            this.pnlStudentData.Size = new System.Drawing.Size(764, 821);
             this.pnlStudentData.TabIndex = 10;
             this.pnlStudentData.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlStudentData_Paint);
             // 
             // btnAddLInk
             // 
-            this.btnAddLInk.Location = new System.Drawing.Point(515, 432);
+            this.btnAddLInk.Location = new System.Drawing.Point(559, 27);
             this.btnAddLInk.Margin = new System.Windows.Forms.Padding(6);
             this.btnAddLInk.Name = "btnAddLInk";
-            this.btnAddLInk.Size = new System.Drawing.Size(150, 44);
+            this.btnAddLInk.Size = new System.Drawing.Size(111, 44);
             this.btnAddLInk.TabIndex = 34;
             this.btnAddLInk.Text = "Add Link";
             this.btnAddLInk.UseVisualStyleBackColor = true;
+            this.btnAddLInk.Click += new System.EventHandler(this.btnAddLInk_Click);
             // 
             // txtLinks
             // 
-            this.txtLinks.Location = new System.Drawing.Point(298, 439);
+            this.txtLinks.Location = new System.Drawing.Point(217, 33);
             this.txtLinks.Name = "txtLinks";
-            this.txtLinks.Size = new System.Drawing.Size(196, 31);
+            this.txtLinks.Size = new System.Drawing.Size(319, 31);
             this.txtLinks.TabIndex = 33;
             this.txtLinks.Text = "type link here";
+            this.txtLinks.TextChanged += new System.EventHandler(this.txtLinks_TextChanged);
             // 
             // lbDisplayLinks
             // 
+            this.lbDisplayLinks.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lbDisplayLinks.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbDisplayLinks.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.lbDisplayLinks.FormattingEnabled = true;
             this.lbDisplayLinks.ItemHeight = 25;
-            this.lbDisplayLinks.Location = new System.Drawing.Point(298, 498);
+            this.lbDisplayLinks.Location = new System.Drawing.Point(217, 96);
             this.lbDisplayLinks.Name = "lbDisplayLinks";
-            this.lbDisplayLinks.Size = new System.Drawing.Size(416, 79);
+            this.lbDisplayLinks.Size = new System.Drawing.Size(453, 79);
             this.lbDisplayLinks.TabIndex = 32;
+            this.lbDisplayLinks.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lbDisplayLinks_MouseClick);
             this.lbDisplayLinks.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
+            this.lbDisplayLinks.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.lbDisplayLinks_MouseDoubleClick);
             // 
             // txtCredits
             // 
@@ -163,7 +170,7 @@
             // 
             // btnRead
             // 
-            this.btnRead.Location = new System.Drawing.Point(218, 649);
+            this.btnRead.Location = new System.Drawing.Point(217, 729);
             this.btnRead.Margin = new System.Windows.Forms.Padding(6);
             this.btnRead.Name = "btnRead";
             this.btnRead.Size = new System.Drawing.Size(150, 44);
@@ -176,7 +183,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Dubai", 9.749999F);
-            this.label3.Location = new System.Drawing.Point(56, 433);
+            this.label3.Location = new System.Drawing.Point(6, 27);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(205, 44);
             this.label3.TabIndex = 24;
@@ -184,7 +191,7 @@
             // 
             // btnDeleteModule
             // 
-            this.btnDeleteModule.Location = new System.Drawing.Point(574, 649);
+            this.btnDeleteModule.Location = new System.Drawing.Point(573, 729);
             this.btnDeleteModule.Margin = new System.Windows.Forms.Padding(6);
             this.btnDeleteModule.Name = "btnDeleteModule";
             this.btnDeleteModule.Size = new System.Drawing.Size(150, 44);
@@ -195,7 +202,7 @@
             // 
             // btnUpdateModule
             // 
-            this.btnUpdateModule.Location = new System.Drawing.Point(398, 650);
+            this.btnUpdateModule.Location = new System.Drawing.Point(397, 730);
             this.btnUpdateModule.Margin = new System.Windows.Forms.Padding(6);
             this.btnUpdateModule.Name = "btnUpdateModule";
             this.btnUpdateModule.Size = new System.Drawing.Size(150, 44);
@@ -224,7 +231,7 @@
             // 
             // btnCreateModule
             // 
-            this.btnCreateModule.Location = new System.Drawing.Point(41, 649);
+            this.btnCreateModule.Location = new System.Drawing.Point(40, 729);
             this.btnCreateModule.Margin = new System.Windows.Forms.Padding(6);
             this.btnCreateModule.Name = "btnCreateModule";
             this.btnCreateModule.Size = new System.Drawing.Size(150, 44);
@@ -344,12 +351,36 @@
             this.dgvinfoModules.Size = new System.Drawing.Size(695, 497);
             this.dgvinfoModules.TabIndex = 15;
             // 
+            // btnRemoveLink
+            // 
+            this.btnRemoveLink.Location = new System.Drawing.Point(520, 196);
+            this.btnRemoveLink.Margin = new System.Windows.Forms.Padding(6);
+            this.btnRemoveLink.Name = "btnRemoveLink";
+            this.btnRemoveLink.Size = new System.Drawing.Size(150, 44);
+            this.btnRemoveLink.TabIndex = 35;
+            this.btnRemoveLink.Text = "Remove Link";
+            this.btnRemoveLink.UseVisualStyleBackColor = true;
+            this.btnRemoveLink.Click += new System.EventHandler(this.btnRemoveLink_Click);
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.btnRemoveLink);
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.lbDisplayLinks);
+            this.groupBox1.Controls.Add(this.btnAddLInk);
+            this.groupBox1.Controls.Add(this.txtLinks);
+            this.groupBox1.Location = new System.Drawing.Point(30, 427);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(704, 261);
+            this.groupBox1.TabIndex = 36;
+            this.groupBox1.TabStop = false;
+            // 
             // FrmModuleInformation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(1574, 886);
+            this.ClientSize = new System.Drawing.Size(1574, 960);
             this.Controls.Add(this.dgvinfoModules);
             this.Controls.Add(this.pnlSearch);
             this.Controls.Add(this.label4);
@@ -365,6 +396,8 @@
             this.pnlSearch.ResumeLayout(false);
             this.pnlSearch.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvinfoModules)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -399,5 +432,7 @@
         private System.Windows.Forms.ListBox lbDisplayLinks;
         private System.Windows.Forms.Button btnAddLInk;
         private System.Windows.Forms.TextBox txtLinks;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Button btnRemoveLink;
     }
 }

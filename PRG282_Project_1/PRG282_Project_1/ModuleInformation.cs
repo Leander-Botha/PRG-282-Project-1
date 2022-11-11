@@ -59,5 +59,53 @@ namespace PRG282_Project_1
         {
 
         }
+
+        private void txtLinks_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAddLInk_Click(object sender, EventArgs e)
+        {
+            if (txtLinks.Text == "")
+            {
+                MessageBox.Show("Please enter a link!");
+            }
+
+            else
+            {
+                lbDisplayLinks.Items.Add(txtLinks.Text);
+                txtLinks.Clear();
+
+            }
+           
+        }
+
+        private void lbDisplayLinks_MouseClick(object sender, MouseEventArgs e)
+        {
+           
+
+      
+        }
+
+        private void btnRemoveLink_Click(object sender, EventArgs e)
+        {
+            if (lbDisplayLinks.SelectedIndex >= 0)
+                lbDisplayLinks.Items.RemoveAt(lbDisplayLinks.SelectedIndex);
+        }
+
+        private void lbDisplayLinks_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            try
+            {
+                if (lbDisplayLinks.SelectedIndex >= 0)
+                    System.Diagnostics.Process.Start(lbDisplayLinks.SelectedItem.ToString());
+            }
+            catch (Exception)
+            {
+
+                MessageBox.Show("Invalid link!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }

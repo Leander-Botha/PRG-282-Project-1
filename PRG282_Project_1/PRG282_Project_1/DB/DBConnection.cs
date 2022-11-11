@@ -59,13 +59,13 @@ namespace PRG282_Project_1.DB
 
         public DataTable Search(int studentNumber) 
         { 
-            string searchQuery = $"select * from tblStudent where studentNumber = '{studentNumber}'";
+            string searchQuery = $"SELECT * FROM tblStudent WHERE studentNumber = '{studentNumber}'";
             return executeSqlCommand(searchQuery);    
         }
 
         public DataTable DisplayAll()
         {
-            string searchQuery = $"select * from tblStudent";
+            string searchQuery = $"SELECT * FROM tblStudent";
             return executeSqlCommand(searchQuery);
         }
 
@@ -88,7 +88,57 @@ namespace PRG282_Project_1.DB
                 cmd.Parameters.AddWithValue("@studentGender", studentGender);
                 cmd.ExecuteNonQuery();
                 Sqlcon.Close();
-            
         }
+
+        public void Delete(int studentNumber) 
+        {
+            string deleteQuery = "DELETE FROM tblStudent WHERE studentNumber = @studentNumber";
+
+            if (MessageBox.Show("Are you sure you want to delete data for student with ID: "+studentNumber+"? this cannot be undone.","Delete",MessageBoxButtons.YesNo,MessageBoxIcon.Warning) == DialogResult.Yes) 
+            {
+                SqlCommand cmd = new SqlCommand(deleteQuery, this.Sqlcon);
+
+                Sqlcon.Open();
+                cmd.Parameters.AddWithValue("@studentNumber", studentNumber);
+                cmd.ExecuteNonQuery();
+                Sqlcon.Close();
+
+                MessageBox.Show("Details for Student with ID: " + studentNumber + " has been deleted.", "Delete");
+            }
+
+
+
+        }
+
+        public void Update(int studentNumber, string studentFirstName, string studentSurname, string studentDOB, object studentImage, string studentPhone, string studentAddress, string studentGender) 
+        {
+            string createQuery = "UPDATE tblStudent SET studentFirstName = @studentFirstName, studentSurname = @studentSurname, studentDOB = @studentDOB, studentImage = @studentImage, studentPhone = @studentPhone, studentAddress = @studentAddress, studentGender = @studentGender WHERE studentNumber = @studentNumber";
+
+            SqlCommand cmd = new SqlCommand(createQuery, this.Sqlcon);
+
+            Sqlcon.Open();
+            cmd.Parameters.AddWithValue("@studentNumber", studentNumber);
+            cmd.Parameters.AddWithValue("@studentFirstName", studentFirstName);
+            cmd.Parameters.AddWithValue("@studentSurname", studentSurname);
+            cmd.Parameters.AddWithValue("@studentDOB", studentDOB);
+            cmd.Parameters.AddWithValue("@studentImage", studentImage);
+            cmd.Parameters.AddWithValue("@studentPhone", studentPhone);
+            cmd.Parameters.AddWithValue("@studentAddress", studentAddress);
+            cmd.Parameters.AddWithValue("@studentGender", studentGender);
+            cmd.ExecuteNonQuery();
+            Sqlcon.Close();
+
+            MessageBox.Show("Details for Student with ID: " + studentNumber + " has been updated.", "Update");
+
+        }
+
+        //Converts an image to bytes and returns the bytes to be stored in the database.
+        public object ConvertImageToBytes(PictureBox picStudent) 
+        {
+            var image = new ImageConverter().ConvertTo(picStudent.Image, typeof(byte[]));
+            return image;
+        }
+
+
     }
 }

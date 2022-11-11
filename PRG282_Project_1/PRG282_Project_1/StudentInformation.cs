@@ -164,5 +164,62 @@ namespace PRG282_Project_1
                 MessageBox.Show(err.Message);
             }
         }
+
+        private void dgvInfo_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+          
+
+        }
+
+        private void dgvInfo_SelectionChanged(object sender, EventArgs e)
+        {
+            if (dgvInfo.SelectedRows.Count > 0)
+            {
+                txtStudentNr.Text = dgvInfo.SelectedRows[0].Cells[0].Value.ToString();
+                txtName.Text = dgvInfo.SelectedRows[0].Cells[1].Value.ToString();
+                txtSurname.Text = dgvInfo.SelectedRows[0].Cells[2].Value.ToString();
+
+                if (dgvInfo.SelectedRows[0].Cells[4].Value.ToString() != "")
+                {
+                    
+                    picStudent.Image = (System.Drawing.Image)new ImageConverter().ConvertFrom(dgvInfo.SelectedRows[0].Cells[4].Value);
+                }
+                else
+                {
+                    picStudent.Image = Properties.Resources._default;
+                }
+
+                if (dgvInfo.SelectedRows[0].Cells[3].Value.ToString() != "")
+                {
+
+                    dtpStudent.Value = (DateTime)dgvInfo.SelectedRows[0].Cells[3].Value;
+                }
+
+                else
+                {
+                    dtpStudent.Value = DateTime.Now;
+                }
+
+                if(cbxGender.Items.Contains(dgvInfo.SelectedRows[0].Cells[7].Value.ToString()))
+                {
+                    cbxGender.SelectedIndex = cbxGender.Items.IndexOf(dgvInfo.SelectedRows[0].Cells[7].Value.ToString()); 
+                }
+                else
+                {
+                    cbxGender.SelectedIndex = 0; 
+                }
+
+                txtPhone.Text = dgvInfo.SelectedRows[0].Cells[5].Value.ToString();
+                txtAddress.Text = dgvInfo.SelectedRows[0].Cells[6].Value.ToString();
+
+            
+            }
+          
+        }
+
+        private void cbxModules_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -13,6 +13,7 @@ namespace PRG282_Project_1
 {
     public partial class FrmModuleInformation : Form
     {
+        DBConnection dbc;
         public FrmModuleInformation()
         {
             InitializeComponent();
@@ -106,6 +107,40 @@ namespace PRG282_Project_1
 
                 MessageBox.Show("Invalid link!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void dgvinfoModules_SelectionChanged(object sender, EventArgs e)
+        {
+            if (dgvinfoModules.SelectedRows.Count > 0)
+            {
+                txtModuleCode.Text = dgvinfoModules.SelectedRows[0].Cells[0].Value.ToString();
+                txtModuleName.Text = dgvinfoModules.SelectedRows[0].Cells[1].Value.ToString();
+                txtNQFlevel.Text = dgvinfoModules.SelectedRows[0].Cells[2].Value.ToString();
+                txtCredits.Text = dgvinfoModules.SelectedRows[0].Cells[3].Value.ToString();
+                txtModuleDescription.Text = dgvinfoModules.SelectedRows[0].Cells[4].Value.ToString();
+
+
+                string command = "Select linkURL from tblLink where moduleCode = " + txtModuleCode.Text + "";
+
+                DataTable DT = dbc.executeSqlCommand(command);
+
+                lbDisplayLinks.Items.Clear();
+
+                if (DT != null)
+                {
+                    foreach (var link in DT.AsEnumerable())
+                    {
+                        lbDisplayLinks.Items.Add(link[0]);
+                    }
+
+                }
+
+            }
+        }
+
+        private void FrmModuleInformation_Load(object sender, EventArgs e)
+        {
+            dbc = new DBConnection();
         }
     }
 }

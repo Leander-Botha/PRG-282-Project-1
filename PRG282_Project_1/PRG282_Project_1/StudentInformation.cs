@@ -194,14 +194,17 @@ namespace PRG282_Project_1
                 DataTable DT = dbc.executeSqlCommand(command);
 
                 lbDisplayModules.Items.Clear();
-                foreach (var module in DT.AsEnumerable())
+
+                if (DT != null)
                 {
-                    lbDisplayModules.Items.Add(module[0]);
+                    foreach (var module in DT.AsEnumerable())
+                    {
+                        lbDisplayModules.Items.Add(module[0]);
+                    }
                 }
 
                 if (dgvInfo.SelectedRows[0].Cells[4].Value.ToString() != "")
-                {
-                    
+                { 
                     picStudent.Image = (System.Drawing.Image)new ImageConverter().ConvertFrom(dgvInfo.SelectedRows[0].Cells[4].Value);
                 }
                 else
@@ -211,7 +214,6 @@ namespace PRG282_Project_1
 
                 if (dgvInfo.SelectedRows[0].Cells[3].Value.ToString() != "")
                 {
-
                     dtpStudent.Value = (DateTime)dgvInfo.SelectedRows[0].Cells[3].Value;
                 }
 

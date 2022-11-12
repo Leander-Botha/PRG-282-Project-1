@@ -30,15 +30,17 @@
         {
             this.label10 = new System.Windows.Forms.Label();
             this.pnlStudentData = new System.Windows.Forms.Panel();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnRemoveLink = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.lbDisplayLinks = new System.Windows.Forms.ListBox();
             this.btnAddLInk = new System.Windows.Forms.Button();
             this.txtLinks = new System.Windows.Forms.TextBox();
-            this.lbDisplayLinks = new System.Windows.Forms.ListBox();
             this.txtCredits = new System.Windows.Forms.TextBox();
             this.txtNQFlevel = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.btnRead = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
             this.btnDeleteModule = new System.Windows.Forms.Button();
             this.btnUpdateModule = new System.Windows.Forms.Button();
             this.txtModuleName = new System.Windows.Forms.TextBox();
@@ -55,12 +57,10 @@
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.btnSearchModule = new System.Windows.Forms.Button();
             this.dgvinfoModules = new System.Windows.Forms.DataGridView();
-            this.btnRemoveLink = new System.Windows.Forms.Button();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.pnlStudentData.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.pnlSearch.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvinfoModules)).BeginInit();
-            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label10
@@ -99,6 +99,55 @@
             this.pnlStudentData.TabIndex = 10;
             this.pnlStudentData.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlStudentData_Paint);
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.btnRemoveLink);
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.lbDisplayLinks);
+            this.groupBox1.Controls.Add(this.btnAddLInk);
+            this.groupBox1.Controls.Add(this.txtLinks);
+            this.groupBox1.Location = new System.Drawing.Point(30, 427);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(704, 261);
+            this.groupBox1.TabIndex = 36;
+            this.groupBox1.TabStop = false;
+            // 
+            // btnRemoveLink
+            // 
+            this.btnRemoveLink.Location = new System.Drawing.Point(520, 196);
+            this.btnRemoveLink.Margin = new System.Windows.Forms.Padding(6);
+            this.btnRemoveLink.Name = "btnRemoveLink";
+            this.btnRemoveLink.Size = new System.Drawing.Size(150, 44);
+            this.btnRemoveLink.TabIndex = 35;
+            this.btnRemoveLink.Text = "Remove Link";
+            this.btnRemoveLink.UseVisualStyleBackColor = true;
+            this.btnRemoveLink.Click += new System.EventHandler(this.btnRemoveLink_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Dubai", 9.749999F);
+            this.label3.Location = new System.Drawing.Point(6, 27);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(205, 44);
+            this.label3.TabIndex = 24;
+            this.label3.Text = "Online Resources:";
+            // 
+            // lbDisplayLinks
+            // 
+            this.lbDisplayLinks.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lbDisplayLinks.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbDisplayLinks.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.lbDisplayLinks.FormattingEnabled = true;
+            this.lbDisplayLinks.ItemHeight = 25;
+            this.lbDisplayLinks.Location = new System.Drawing.Point(217, 96);
+            this.lbDisplayLinks.Name = "lbDisplayLinks";
+            this.lbDisplayLinks.Size = new System.Drawing.Size(453, 79);
+            this.lbDisplayLinks.TabIndex = 32;
+            this.lbDisplayLinks.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lbDisplayLinks_MouseClick);
+            this.lbDisplayLinks.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
+            this.lbDisplayLinks.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.lbDisplayLinks_MouseDoubleClick);
+            // 
             // btnAddLInk
             // 
             this.btnAddLInk.Location = new System.Drawing.Point(559, 27);
@@ -118,21 +167,6 @@
             this.txtLinks.TabIndex = 33;
             this.txtLinks.Text = "type link here";
             this.txtLinks.TextChanged += new System.EventHandler(this.txtLinks_TextChanged);
-            // 
-            // lbDisplayLinks
-            // 
-            this.lbDisplayLinks.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lbDisplayLinks.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbDisplayLinks.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.lbDisplayLinks.FormattingEnabled = true;
-            this.lbDisplayLinks.ItemHeight = 25;
-            this.lbDisplayLinks.Location = new System.Drawing.Point(217, 96);
-            this.lbDisplayLinks.Name = "lbDisplayLinks";
-            this.lbDisplayLinks.Size = new System.Drawing.Size(453, 79);
-            this.lbDisplayLinks.TabIndex = 32;
-            this.lbDisplayLinks.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lbDisplayLinks_MouseClick);
-            this.lbDisplayLinks.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
-            this.lbDisplayLinks.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.lbDisplayLinks_MouseDoubleClick);
             // 
             // txtCredits
             // 
@@ -178,16 +212,6 @@
             this.btnRead.Text = "Read";
             this.btnRead.UseVisualStyleBackColor = true;
             this.btnRead.Click += new System.EventHandler(this.btnRead_Click);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Dubai", 9.749999F);
-            this.label3.Location = new System.Drawing.Point(6, 27);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(205, 44);
-            this.label3.TabIndex = 24;
-            this.label3.Text = "Online Resources:";
             // 
             // btnDeleteModule
             // 
@@ -346,34 +370,13 @@
             this.dgvinfoModules.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvinfoModules.Location = new System.Drawing.Point(847, 256);
             this.dgvinfoModules.Margin = new System.Windows.Forms.Padding(6);
+            this.dgvinfoModules.MultiSelect = false;
             this.dgvinfoModules.Name = "dgvinfoModules";
             this.dgvinfoModules.RowHeadersWidth = 82;
+            this.dgvinfoModules.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvinfoModules.Size = new System.Drawing.Size(695, 497);
             this.dgvinfoModules.TabIndex = 15;
-            // 
-            // btnRemoveLink
-            // 
-            this.btnRemoveLink.Location = new System.Drawing.Point(520, 196);
-            this.btnRemoveLink.Margin = new System.Windows.Forms.Padding(6);
-            this.btnRemoveLink.Name = "btnRemoveLink";
-            this.btnRemoveLink.Size = new System.Drawing.Size(150, 44);
-            this.btnRemoveLink.TabIndex = 35;
-            this.btnRemoveLink.Text = "Remove Link";
-            this.btnRemoveLink.UseVisualStyleBackColor = true;
-            this.btnRemoveLink.Click += new System.EventHandler(this.btnRemoveLink_Click);
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.btnRemoveLink);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.lbDisplayLinks);
-            this.groupBox1.Controls.Add(this.btnAddLInk);
-            this.groupBox1.Controls.Add(this.txtLinks);
-            this.groupBox1.Location = new System.Drawing.Point(30, 427);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(704, 261);
-            this.groupBox1.TabIndex = 36;
-            this.groupBox1.TabStop = false;
+            this.dgvinfoModules.SelectionChanged += new System.EventHandler(this.dgvinfoModules_SelectionChanged);
             // 
             // FrmModuleInformation
             // 
@@ -391,13 +394,14 @@
             this.Padding = new System.Windows.Forms.Padding(35, 0, 40, 50);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Module Information";
+            this.Load += new System.EventHandler(this.FrmModuleInformation_Load);
             this.pnlStudentData.ResumeLayout(false);
             this.pnlStudentData.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.pnlSearch.ResumeLayout(false);
             this.pnlSearch.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvinfoModules)).EndInit();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 

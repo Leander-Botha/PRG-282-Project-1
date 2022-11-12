@@ -56,6 +56,16 @@ namespace PRG282_Project_1
         {
             dbc = new DBConnection();
             dgvInfo.DataSource = dbc.DisplayAll();
+
+            string command = "SELECT moduleName from tblModule";
+
+            DataTable DT = dbc.executeSqlCommand(command);
+
+            cbxModules.Items.Clear();
+            foreach (var module in DT.AsEnumerable())
+            {
+                cbxModules.Items.Add(module[0]);
+            }
         }
 
         private void label11_Click(object sender, EventArgs e)
@@ -179,6 +189,16 @@ namespace PRG282_Project_1
                 txtName.Text = dgvInfo.SelectedRows[0].Cells[1].Value.ToString();
                 txtSurname.Text = dgvInfo.SelectedRows[0].Cells[2].Value.ToString();
 
+                string command = "Select moduleName from tblModule inner join tblStudentModule on tblModule.moduleCode = tblStudentModule.moduleCode where studentNumber = "+ txtStudentNr.Text +"";
+
+                DataTable DT = dbc.executeSqlCommand(command);
+
+                lbDisplayModules.Items.Clear();
+                foreach (var module in DT.AsEnumerable())
+                {
+                    lbDisplayModules.Items.Add(module[0]);
+                }
+
                 if (dgvInfo.SelectedRows[0].Cells[4].Value.ToString() != "")
                 {
                     
@@ -220,6 +240,35 @@ namespace PRG282_Project_1
         private void cbxModules_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnAddModule_Click(object sender, EventArgs e)
+        {
+            if (cbxModules.SelectedItem !=  null)
+            {
+                if (lbDisplayModules.Items.Contains(cbxModules.SelectedItem))
+                {
+                    MessageBox.Show("Module already added!");
+                }
+                else
+                {
+                    lbDisplayModules.Items.Add(cbxModules.SelectedItem.ToString());
+                }
+            }
+            else
+            {
+                MessageBox.Show("Please select a module!");
+            }
+
+        }
+
+        private void btnRemoveMod_Click(object sender, EventArgs e)
+        {
+            if (lbDisplayModules.SelectedIndex > -1)
+            {
+                lbDisplayModules.Items.RemoveAt(lbDisplayModules.SelectedIndex);
+            }
+           
         }
     }
 }

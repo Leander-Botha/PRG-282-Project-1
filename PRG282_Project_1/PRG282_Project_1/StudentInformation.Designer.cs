@@ -29,9 +29,14 @@
         private void InitializeComponent()
         {
             this.pnlStudentData = new System.Windows.Forms.Panel();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnRemoveMod = new System.Windows.Forms.Button();
+            this.label8 = new System.Windows.Forms.Label();
+            this.btnAddModule = new System.Windows.Forms.Button();
+            this.cbxModules = new System.Windows.Forms.ComboBox();
+            this.lbDisplayModules = new System.Windows.Forms.ListBox();
             this.btnRead = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
-            this.cbxModules = new System.Windows.Forms.ComboBox();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.picStudent = new System.Windows.Forms.PictureBox();
             this.txtName = new System.Windows.Forms.TextBox();
@@ -39,7 +44,6 @@
             this.dtpStudent = new System.Windows.Forms.DateTimePicker();
             this.btnCreate = new System.Windows.Forms.Button();
             this.cbxGender = new System.Windows.Forms.ComboBox();
-            this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -58,15 +62,11 @@
             this.label11 = new System.Windows.Forms.Label();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.dgvInfo = new System.Windows.Forms.DataGridView();
-            this.lbDisplayModules = new System.Windows.Forms.ListBox();
-            this.btnAddModule = new System.Windows.Forms.Button();
-            this.btnRemoveMod = new System.Windows.Forms.Button();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.pnlStudentData.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picStudent)).BeginInit();
             this.pnlSearch.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInfo)).BeginInit();
-            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlStudentData
@@ -93,16 +93,83 @@
             this.pnlStudentData.Controls.Add(this.label2);
             this.pnlStudentData.Controls.Add(this.label1);
             this.pnlStudentData.Controls.Add(this.txtSurname);
-            this.pnlStudentData.Location = new System.Drawing.Point(68, 119);
-            this.pnlStudentData.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.pnlStudentData.Location = new System.Drawing.Point(68, 81);
+            this.pnlStudentData.Margin = new System.Windows.Forms.Padding(6);
             this.pnlStudentData.Name = "pnlStudentData";
-            this.pnlStudentData.Size = new System.Drawing.Size(790, 1202);
+            this.pnlStudentData.Size = new System.Drawing.Size(790, 1182);
             this.pnlStudentData.TabIndex = 8;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.btnRemoveMod);
+            this.groupBox1.Controls.Add(this.label8);
+            this.groupBox1.Controls.Add(this.btnAddModule);
+            this.groupBox1.Controls.Add(this.cbxModules);
+            this.groupBox1.Controls.Add(this.lbDisplayModules);
+            this.groupBox1.Location = new System.Drawing.Point(38, 832);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(714, 230);
+            this.groupBox1.TabIndex = 28;
+            this.groupBox1.TabStop = false;
+            // 
+            // btnRemoveMod
+            // 
+            this.btnRemoveMod.Location = new System.Drawing.Point(84, 134);
+            this.btnRemoveMod.Margin = new System.Windows.Forms.Padding(6);
+            this.btnRemoveMod.Name = "btnRemoveMod";
+            this.btnRemoveMod.Size = new System.Drawing.Size(192, 44);
+            this.btnRemoveMod.TabIndex = 27;
+            this.btnRemoveMod.Text = "Remove Module";
+            this.btnRemoveMod.UseVisualStyleBackColor = true;
+            this.btnRemoveMod.Click += new System.EventHandler(this.btnRemoveMod_Click);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Dubai", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(26, 39);
+            this.label8.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(172, 44);
+            this.label8.TabIndex = 16;
+            this.label8.Text = "Module Codes:";
+            // 
+            // btnAddModule
+            // 
+            this.btnAddModule.Location = new System.Drawing.Point(519, 37);
+            this.btnAddModule.Margin = new System.Windows.Forms.Padding(6);
+            this.btnAddModule.Name = "btnAddModule";
+            this.btnAddModule.Size = new System.Drawing.Size(150, 44);
+            this.btnAddModule.TabIndex = 26;
+            this.btnAddModule.Text = "Add Module";
+            this.btnAddModule.UseVisualStyleBackColor = true;
+            this.btnAddModule.Click += new System.EventHandler(this.btnAddModule_Click);
+            // 
+            // cbxModules
+            // 
+            this.cbxModules.FormattingEnabled = true;
+            this.cbxModules.Items.AddRange(new object[] {
+            "None"});
+            this.cbxModules.Location = new System.Drawing.Point(290, 42);
+            this.cbxModules.Margin = new System.Windows.Forms.Padding(6);
+            this.cbxModules.Name = "cbxModules";
+            this.cbxModules.Size = new System.Drawing.Size(196, 33);
+            this.cbxModules.TabIndex = 18;
+            this.cbxModules.SelectedIndexChanged += new System.EventHandler(this.cbxModules_SelectedIndexChanged);
+            // 
+            // lbDisplayModules
+            // 
+            this.lbDisplayModules.FormattingEnabled = true;
+            this.lbDisplayModules.ItemHeight = 25;
+            this.lbDisplayModules.Location = new System.Drawing.Point(296, 116);
+            this.lbDisplayModules.Name = "lbDisplayModules";
+            this.lbDisplayModules.Size = new System.Drawing.Size(382, 79);
+            this.lbDisplayModules.TabIndex = 25;
             // 
             // btnRead
             // 
-            this.btnRead.Location = new System.Drawing.Point(224, 1115);
-            this.btnRead.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnRead.Location = new System.Drawing.Point(224, 1107);
+            this.btnRead.Margin = new System.Windows.Forms.Padding(6);
             this.btnRead.Name = "btnRead";
             this.btnRead.Size = new System.Drawing.Size(150, 44);
             this.btnRead.TabIndex = 24;
@@ -112,8 +179,8 @@
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(602, 1115);
-            this.btnDelete.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnDelete.Location = new System.Drawing.Point(602, 1107);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(6);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(150, 44);
             this.btnDelete.TabIndex = 23;
@@ -121,22 +188,10 @@
             this.btnDelete.UseVisualStyleBackColor = true;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click_1);
             // 
-            // cbxModules
-            // 
-            this.cbxModules.FormattingEnabled = true;
-            this.cbxModules.Items.AddRange(new object[] {
-            "None"});
-            this.cbxModules.Location = new System.Drawing.Point(290, 42);
-            this.cbxModules.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
-            this.cbxModules.Name = "cbxModules";
-            this.cbxModules.Size = new System.Drawing.Size(196, 33);
-            this.cbxModules.TabIndex = 18;
-            this.cbxModules.SelectedIndexChanged += new System.EventHandler(this.cbxModules_SelectedIndexChanged);
-            // 
             // btnUpdate
             // 
-            this.btnUpdate.Location = new System.Drawing.Point(412, 1116);
-            this.btnUpdate.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnUpdate.Location = new System.Drawing.Point(412, 1108);
+            this.btnUpdate.Margin = new System.Windows.Forms.Padding(6);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(150, 44);
             this.btnUpdate.TabIndex = 14;
@@ -150,7 +205,7 @@
             this.picStudent.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picStudent.Image = global::PRG282_Project_1.Properties.Resources._default;
             this.picStudent.Location = new System.Drawing.Point(308, 292);
-            this.picStudent.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.picStudent.Margin = new System.Windows.Forms.Padding(6);
             this.picStudent.Name = "picStudent";
             this.picStudent.Size = new System.Drawing.Size(246, 144);
             this.picStudent.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -161,7 +216,7 @@
             // txtName
             // 
             this.txtName.Location = new System.Drawing.Point(328, 129);
-            this.txtName.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtName.Margin = new System.Windows.Forms.Padding(6);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(196, 31);
             this.txtName.TabIndex = 20;
@@ -181,7 +236,7 @@
             // 
             this.dtpStudent.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpStudent.Location = new System.Drawing.Point(328, 469);
-            this.dtpStudent.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.dtpStudent.Margin = new System.Windows.Forms.Padding(6);
             this.dtpStudent.Name = "dtpStudent";
             this.dtpStudent.Size = new System.Drawing.Size(362, 31);
             this.dtpStudent.TabIndex = 18;
@@ -189,8 +244,8 @@
             // 
             // btnCreate
             // 
-            this.btnCreate.Location = new System.Drawing.Point(38, 1115);
-            this.btnCreate.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnCreate.Location = new System.Drawing.Point(38, 1107);
+            this.btnCreate.Margin = new System.Windows.Forms.Padding(6);
             this.btnCreate.Name = "btnCreate";
             this.btnCreate.Size = new System.Drawing.Size(150, 44);
             this.btnCreate.TabIndex = 10;
@@ -205,21 +260,10 @@
             "Male",
             "Female"});
             this.cbxGender.Location = new System.Drawing.Point(328, 569);
-            this.cbxGender.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.cbxGender.Margin = new System.Windows.Forms.Padding(6);
             this.cbxGender.Name = "cbxGender";
             this.cbxGender.Size = new System.Drawing.Size(196, 33);
             this.cbxGender.TabIndex = 17;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Dubai", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(26, 39);
-            this.label8.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(172, 44);
-            this.label8.TabIndex = 16;
-            this.label8.Text = "Module Codes:";
             // 
             // label7
             // 
@@ -257,7 +301,7 @@
             // txtPhone
             // 
             this.txtPhone.Location = new System.Drawing.Point(328, 677);
-            this.txtPhone.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtPhone.Margin = new System.Windows.Forms.Padding(6);
             this.txtPhone.Name = "txtPhone";
             this.txtPhone.Size = new System.Drawing.Size(196, 31);
             this.txtPhone.TabIndex = 12;
@@ -276,7 +320,7 @@
             // txtStudentNr
             // 
             this.txtStudentNr.Location = new System.Drawing.Point(328, 52);
-            this.txtStudentNr.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtStudentNr.Margin = new System.Windows.Forms.Padding(6);
             this.txtStudentNr.Name = "txtStudentNr";
             this.txtStudentNr.Size = new System.Drawing.Size(196, 31);
             this.txtStudentNr.TabIndex = 11;
@@ -295,7 +339,7 @@
             // txtAddress
             // 
             this.txtAddress.Location = new System.Drawing.Point(328, 765);
-            this.txtAddress.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtAddress.Margin = new System.Windows.Forms.Padding(6);
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.Size = new System.Drawing.Size(196, 31);
             this.txtAddress.TabIndex = 10;
@@ -325,15 +369,15 @@
             // txtSurname
             // 
             this.txtSurname.Location = new System.Drawing.Point(328, 206);
-            this.txtSurname.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtSurname.Margin = new System.Windows.Forms.Padding(6);
             this.txtSurname.Name = "txtSurname";
             this.txtSurname.Size = new System.Drawing.Size(196, 31);
             this.txtSurname.TabIndex = 8;
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(1742, 1081);
-            this.btnCancel.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnCancel.Location = new System.Drawing.Point(1743, 1188);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(6);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(150, 44);
             this.btnCancel.TabIndex = 22;
@@ -345,7 +389,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Century", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(60, 73);
+            this.label10.Location = new System.Drawing.Point(60, 35);
             this.label10.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(413, 44);
@@ -355,7 +399,7 @@
             // btnSearchStudent
             // 
             this.btnSearchStudent.Location = new System.Drawing.Point(444, 50);
-            this.btnSearchStudent.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnSearchStudent.Margin = new System.Windows.Forms.Padding(6);
             this.btnSearchStudent.Name = "btnSearchStudent";
             this.btnSearchStudent.Size = new System.Drawing.Size(150, 44);
             this.btnSearchStudent.TabIndex = 12;
@@ -368,8 +412,8 @@
             this.pnlSearch.Controls.Add(this.label11);
             this.pnlSearch.Controls.Add(this.txtSearch);
             this.pnlSearch.Controls.Add(this.btnSearchStudent);
-            this.pnlSearch.Location = new System.Drawing.Point(938, 119);
-            this.pnlSearch.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.pnlSearch.Location = new System.Drawing.Point(938, 81);
+            this.pnlSearch.Margin = new System.Windows.Forms.Padding(6);
             this.pnlSearch.Name = "pnlSearch";
             this.pnlSearch.Size = new System.Drawing.Size(634, 135);
             this.pnlSearch.TabIndex = 13;
@@ -389,7 +433,7 @@
             // txtSearch
             // 
             this.txtSearch.Location = new System.Drawing.Point(232, 50);
-            this.txtSearch.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtSearch.Margin = new System.Windows.Forms.Padding(6);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(196, 31);
             this.txtSearch.TabIndex = 13;
@@ -398,71 +442,29 @@
             // dgvInfo
             // 
             this.dgvInfo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvInfo.Location = new System.Drawing.Point(938, 281);
-            this.dgvInfo.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.dgvInfo.Location = new System.Drawing.Point(938, 252);
+            this.dgvInfo.Margin = new System.Windows.Forms.Padding(6);
             this.dgvInfo.MultiSelect = false;
             this.dgvInfo.Name = "dgvInfo";
             this.dgvInfo.RowHeadersWidth = 82;
             this.dgvInfo.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvInfo.Size = new System.Drawing.Size(1008, 762);
+            this.dgvInfo.Size = new System.Drawing.Size(1008, 876);
             this.dgvInfo.TabIndex = 14;
             this.dgvInfo.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvInfo_CellContentClick);
             this.dgvInfo.SelectionChanged += new System.EventHandler(this.dgvInfo_SelectionChanged);
-            // 
-            // lbDisplayModules
-            // 
-            this.lbDisplayModules.FormattingEnabled = true;
-            this.lbDisplayModules.ItemHeight = 25;
-            this.lbDisplayModules.Location = new System.Drawing.Point(296, 116);
-            this.lbDisplayModules.Name = "lbDisplayModules";
-            this.lbDisplayModules.Size = new System.Drawing.Size(382, 79);
-            this.lbDisplayModules.TabIndex = 25;
-            // 
-            // btnAddModule
-            // 
-            this.btnAddModule.Location = new System.Drawing.Point(519, 37);
-            this.btnAddModule.Margin = new System.Windows.Forms.Padding(6);
-            this.btnAddModule.Name = "btnAddModule";
-            this.btnAddModule.Size = new System.Drawing.Size(150, 44);
-            this.btnAddModule.TabIndex = 26;
-            this.btnAddModule.Text = "Add Module";
-            this.btnAddModule.UseVisualStyleBackColor = true;
-            // 
-            // btnRemoveMod
-            // 
-            this.btnRemoveMod.Location = new System.Drawing.Point(84, 134);
-            this.btnRemoveMod.Margin = new System.Windows.Forms.Padding(6);
-            this.btnRemoveMod.Name = "btnRemoveMod";
-            this.btnRemoveMod.Size = new System.Drawing.Size(192, 44);
-            this.btnRemoveMod.TabIndex = 27;
-            this.btnRemoveMod.Text = "Remove Module";
-            this.btnRemoveMod.UseVisualStyleBackColor = true;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.btnRemoveMod);
-            this.groupBox1.Controls.Add(this.label8);
-            this.groupBox1.Controls.Add(this.btnAddModule);
-            this.groupBox1.Controls.Add(this.cbxModules);
-            this.groupBox1.Controls.Add(this.lbDisplayModules);
-            this.groupBox1.Location = new System.Drawing.Point(38, 841);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(714, 230);
-            this.groupBox1.TabIndex = 28;
-            this.groupBox1.TabStop = false;
             // 
             // FrmStudentInformation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(2116, 1375);
+            this.ClientSize = new System.Drawing.Size(1992, 1297);
             this.Controls.Add(this.dgvInfo);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.pnlSearch);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.pnlStudentData);
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "FrmStudentInformation";
             this.Padding = new System.Windows.Forms.Padding(0, 0, 56, 40);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -470,12 +472,12 @@
             this.Load += new System.EventHandler(this.MainMenu_Load);
             this.pnlStudentData.ResumeLayout(false);
             this.pnlStudentData.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picStudent)).EndInit();
             this.pnlSearch.ResumeLayout(false);
             this.pnlSearch.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInfo)).EndInit();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 

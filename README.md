@@ -3,6 +3,6 @@
 
 Keanu: Database Create & Connection + Help with UI and Forms
 
-Leander: Student Form Update, Create and Delete Functionality. Login Form Functionality.
+Leander: Student Form Update, Create and Delete Functionality. Login Form design and Functionality.
 
 Suné: main menu form, module info form, cancel buttons, read functions, clickable links, studentinformation & moduleinformation display functions

@@ -3,20 +3,25 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
 
 namespace PRG282_Project_1
 {
     public partial class FrmModuleInformation : Form
     {
+       
+        SqlCommand cmd;
         DBConnection dbc;
         public FrmModuleInformation()
         {
             InitializeComponent();
+            
         }
 
         private void label4_Click(object sender, EventArgs e)
@@ -38,7 +43,15 @@ namespace PRG282_Project_1
 
         private void btnDeleteModule_Click(object sender, EventArgs e)
         {
-
+            try
+            {
+                dbc.DeleteModule(txtModuleCode.Text);
+                dgvinfoModules.DataSource = dbc.DisplayAll();
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show(err.Message);
+            }
         }
 
         private void btnRead_Click(object sender, EventArgs e)
@@ -141,6 +154,60 @@ namespace PRG282_Project_1
         private void FrmModuleInformation_Load(object sender, EventArgs e)
         {
             dbc = new DBConnection();
+            dgvinfoModules.DataSource = dbc.DisplayAllModule();
+
+            string command = "SELECT moduleName from tblModule";
+
+            DataTable DT = dbc.executeSqlCommand(command);
+
+            txtModuleCode.Clear();
+            txtModuleDescription.Clear();
+            txtModuleName.Clear();
+            txtNQFlevel.Clear();
+            txtSearch.Clear();
+           
+        }
+
+        private void btnCreateModule_Click(object sender, EventArgs e)
+        {
+            try
+            {
+
+                dbc.CreateModule(txtModuleCode.Text, txtModuleName.Text, int.Parse(txtNQFlevel.Text), int.Parse(txtCredits.Text), txtModuleDescription.Text);
+                MessageBox.Show("Student sucessfully created");
+                dgvinfoModules.DataSource = dbc.DisplayAll();
+
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show(err.Message);
+            }
+        }
+
+        private void btnSearchModule_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                dgvinfoModules.DataSource = dbc.SearchModule(int.Parse(txtSearch.Text));
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show(err.Message);
+
+            }
+        }
+
+        private void btnUpdateModule_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                dbc.UpdateModules(txtModuleCode.Text, txtModuleName.Text, int.Parse(txtNQFlevel.Text), int.Parse(txtCredits.Text),txtModuleDescription.Text);
+                dgvinfoModules.DataSource = dbc.DisplayAll();
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show(err.Message);
+            }
         }
     }
 }

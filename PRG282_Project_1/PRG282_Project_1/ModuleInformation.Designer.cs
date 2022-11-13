@@ -67,10 +67,10 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Century", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(158, -529);
-            this.label10.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label10.Location = new System.Drawing.Point(105, -339);
+            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(413, 44);
+            this.label10.Size = new System.Drawing.Size(218, 23);
             this.label10.TabIndex = 11;
             this.label10.Text = "Student Information:";
             // 
@@ -92,10 +92,10 @@
             this.pnlStudentData.Controls.Add(this.label2);
             this.pnlStudentData.Controls.Add(this.label1);
             this.pnlStudentData.Controls.Add(this.txtModuleDescription);
-            this.pnlStudentData.Location = new System.Drawing.Point(33, 93);
-            this.pnlStudentData.Margin = new System.Windows.Forms.Padding(6);
+            this.pnlStudentData.Location = new System.Drawing.Point(22, 60);
+            this.pnlStudentData.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnlStudentData.Name = "pnlStudentData";
-            this.pnlStudentData.Size = new System.Drawing.Size(764, 821);
+            this.pnlStudentData.Size = new System.Drawing.Size(509, 525);
             this.pnlStudentData.TabIndex = 10;
             this.pnlStudentData.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlStudentData_Paint);
             // 
@@ -106,18 +106,20 @@
             this.groupBox1.Controls.Add(this.lbDisplayLinks);
             this.groupBox1.Controls.Add(this.btnAddLInk);
             this.groupBox1.Controls.Add(this.txtLinks);
-            this.groupBox1.Location = new System.Drawing.Point(30, 427);
+            this.groupBox1.Location = new System.Drawing.Point(20, 273);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(704, 261);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Size = new System.Drawing.Size(469, 167);
             this.groupBox1.TabIndex = 36;
             this.groupBox1.TabStop = false;
             // 
             // btnRemoveLink
             // 
-            this.btnRemoveLink.Location = new System.Drawing.Point(520, 196);
-            this.btnRemoveLink.Margin = new System.Windows.Forms.Padding(6);
+            this.btnRemoveLink.Location = new System.Drawing.Point(347, 125);
+            this.btnRemoveLink.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnRemoveLink.Name = "btnRemoveLink";
-            this.btnRemoveLink.Size = new System.Drawing.Size(150, 44);
+            this.btnRemoveLink.Size = new System.Drawing.Size(100, 28);
             this.btnRemoveLink.TabIndex = 35;
             this.btnRemoveLink.Text = "Remove Link";
             this.btnRemoveLink.UseVisualStyleBackColor = true;
@@ -127,9 +129,10 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Dubai", 9.749999F);
-            this.label3.Location = new System.Drawing.Point(6, 27);
+            this.label3.Location = new System.Drawing.Point(4, 17);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(205, 44);
+            this.label3.Size = new System.Drawing.Size(104, 22);
             this.label3.TabIndex = 24;
             this.label3.Text = "Online Resources:";
             // 
@@ -139,10 +142,10 @@
             this.lbDisplayLinks.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbDisplayLinks.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.lbDisplayLinks.FormattingEnabled = true;
-            this.lbDisplayLinks.ItemHeight = 25;
-            this.lbDisplayLinks.Location = new System.Drawing.Point(217, 96);
+            this.lbDisplayLinks.Location = new System.Drawing.Point(145, 61);
+            this.lbDisplayLinks.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.lbDisplayLinks.Name = "lbDisplayLinks";
-            this.lbDisplayLinks.Size = new System.Drawing.Size(453, 79);
+            this.lbDisplayLinks.Size = new System.Drawing.Size(303, 43);
             this.lbDisplayLinks.TabIndex = 32;
             this.lbDisplayLinks.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lbDisplayLinks_MouseClick);
             this.lbDisplayLinks.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
@@ -150,10 +153,10 @@
             // 
             // btnAddLInk
             // 
-            this.btnAddLInk.Location = new System.Drawing.Point(559, 27);
-            this.btnAddLInk.Margin = new System.Windows.Forms.Padding(6);
+            this.btnAddLInk.Location = new System.Drawing.Point(373, 17);
+            this.btnAddLInk.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnAddLInk.Name = "btnAddLInk";
-            this.btnAddLInk.Size = new System.Drawing.Size(111, 44);
+            this.btnAddLInk.Size = new System.Drawing.Size(74, 28);
             this.btnAddLInk.TabIndex = 34;
             this.btnAddLInk.Text = "Add Link";
             this.btnAddLInk.UseVisualStyleBackColor = true;
@@ -161,34 +164,38 @@
             // 
             // txtLinks
             // 
-            this.txtLinks.Location = new System.Drawing.Point(217, 33);
+            this.txtLinks.Location = new System.Drawing.Point(145, 21);
+            this.txtLinks.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtLinks.Name = "txtLinks";
-            this.txtLinks.Size = new System.Drawing.Size(319, 31);
+            this.txtLinks.Size = new System.Drawing.Size(214, 22);
             this.txtLinks.TabIndex = 33;
             this.txtLinks.Text = "type link here";
             this.txtLinks.TextChanged += new System.EventHandler(this.txtLinks_TextChanged);
             // 
             // txtCredits
             // 
-            this.txtCredits.Location = new System.Drawing.Point(298, 282);
+            this.txtCredits.Location = new System.Drawing.Point(199, 180);
+            this.txtCredits.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtCredits.Name = "txtCredits";
-            this.txtCredits.Size = new System.Drawing.Size(196, 31);
+            this.txtCredits.Size = new System.Drawing.Size(132, 22);
             this.txtCredits.TabIndex = 31;
             // 
             // txtNQFlevel
             // 
-            this.txtNQFlevel.Location = new System.Drawing.Point(298, 203);
+            this.txtNQFlevel.Location = new System.Drawing.Point(199, 130);
+            this.txtNQFlevel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtNQFlevel.Name = "txtNQFlevel";
-            this.txtNQFlevel.Size = new System.Drawing.Size(196, 31);
+            this.txtNQFlevel.Size = new System.Drawing.Size(132, 22);
             this.txtNQFlevel.TabIndex = 30;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Dubai", 9.749999F);
-            this.label6.Location = new System.Drawing.Point(56, 276);
+            this.label6.Location = new System.Drawing.Point(37, 177);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(99, 44);
+            this.label6.Size = new System.Drawing.Size(50, 22);
             this.label6.TabIndex = 29;
             this.label6.Text = "Credits:";
             // 
@@ -196,18 +203,19 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Dubai", 9.749999F);
-            this.label5.Location = new System.Drawing.Point(56, 197);
+            this.label5.Location = new System.Drawing.Point(37, 126);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(134, 44);
+            this.label5.Size = new System.Drawing.Size(68, 22);
             this.label5.TabIndex = 28;
             this.label5.Text = "NQF Level:";
             // 
             // btnRead
             // 
-            this.btnRead.Location = new System.Drawing.Point(217, 729);
-            this.btnRead.Margin = new System.Windows.Forms.Padding(6);
+            this.btnRead.Location = new System.Drawing.Point(145, 467);
+            this.btnRead.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnRead.Name = "btnRead";
-            this.btnRead.Size = new System.Drawing.Size(150, 44);
+            this.btnRead.Size = new System.Drawing.Size(100, 28);
             this.btnRead.TabIndex = 25;
             this.btnRead.Text = "Read";
             this.btnRead.UseVisualStyleBackColor = true;
@@ -215,10 +223,10 @@
             // 
             // btnDeleteModule
             // 
-            this.btnDeleteModule.Location = new System.Drawing.Point(573, 729);
-            this.btnDeleteModule.Margin = new System.Windows.Forms.Padding(6);
+            this.btnDeleteModule.Location = new System.Drawing.Point(382, 467);
+            this.btnDeleteModule.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnDeleteModule.Name = "btnDeleteModule";
-            this.btnDeleteModule.Size = new System.Drawing.Size(150, 44);
+            this.btnDeleteModule.Size = new System.Drawing.Size(100, 28);
             this.btnDeleteModule.TabIndex = 23;
             this.btnDeleteModule.Text = "Delete";
             this.btnDeleteModule.UseVisualStyleBackColor = true;
@@ -226,59 +234,61 @@
             // 
             // btnUpdateModule
             // 
-            this.btnUpdateModule.Location = new System.Drawing.Point(397, 730);
-            this.btnUpdateModule.Margin = new System.Windows.Forms.Padding(6);
+            this.btnUpdateModule.Location = new System.Drawing.Point(265, 467);
+            this.btnUpdateModule.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnUpdateModule.Name = "btnUpdateModule";
-            this.btnUpdateModule.Size = new System.Drawing.Size(150, 44);
+            this.btnUpdateModule.Size = new System.Drawing.Size(100, 28);
             this.btnUpdateModule.TabIndex = 14;
             this.btnUpdateModule.Text = "Update";
             this.btnUpdateModule.UseVisualStyleBackColor = true;
+            this.btnUpdateModule.Click += new System.EventHandler(this.btnUpdateModule_Click);
             // 
             // txtModuleName
             // 
-            this.txtModuleName.Location = new System.Drawing.Point(298, 127);
-            this.txtModuleName.Margin = new System.Windows.Forms.Padding(6);
+            this.txtModuleName.Location = new System.Drawing.Point(199, 81);
+            this.txtModuleName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtModuleName.Name = "txtModuleName";
-            this.txtModuleName.Size = new System.Drawing.Size(196, 31);
+            this.txtModuleName.Size = new System.Drawing.Size(132, 22);
             this.txtModuleName.TabIndex = 20;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Dubai", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(56, 121);
-            this.label9.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label9.Location = new System.Drawing.Point(37, 77);
+            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(170, 44);
+            this.label9.Size = new System.Drawing.Size(87, 22);
             this.label9.TabIndex = 19;
             this.label9.Text = "Module Name:";
             // 
             // btnCreateModule
             // 
-            this.btnCreateModule.Location = new System.Drawing.Point(40, 729);
-            this.btnCreateModule.Margin = new System.Windows.Forms.Padding(6);
+            this.btnCreateModule.Location = new System.Drawing.Point(27, 467);
+            this.btnCreateModule.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnCreateModule.Name = "btnCreateModule";
-            this.btnCreateModule.Size = new System.Drawing.Size(150, 44);
+            this.btnCreateModule.Size = new System.Drawing.Size(100, 28);
             this.btnCreateModule.TabIndex = 10;
             this.btnCreateModule.Text = "Create";
             this.btnCreateModule.UseVisualStyleBackColor = true;
+            this.btnCreateModule.Click += new System.EventHandler(this.btnCreateModule_Click);
             // 
             // txtModuleCode
             // 
-            this.txtModuleCode.Location = new System.Drawing.Point(298, 52);
-            this.txtModuleCode.Margin = new System.Windows.Forms.Padding(6);
+            this.txtModuleCode.Location = new System.Drawing.Point(199, 33);
+            this.txtModuleCode.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtModuleCode.Name = "txtModuleCode";
-            this.txtModuleCode.Size = new System.Drawing.Size(196, 31);
+            this.txtModuleCode.Size = new System.Drawing.Size(132, 22);
             this.txtModuleCode.TabIndex = 11;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Dubai", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(53, 349);
-            this.label2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label2.Location = new System.Drawing.Point(35, 223);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(228, 44);
+            this.label2.Size = new System.Drawing.Size(118, 22);
             this.label2.TabIndex = 10;
             this.label2.Text = "Module Description:";
             // 
@@ -286,27 +296,27 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Dubai", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(56, 46);
-            this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label1.Location = new System.Drawing.Point(37, 29);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(161, 44);
+            this.label1.Size = new System.Drawing.Size(83, 22);
             this.label1.TabIndex = 9;
             this.label1.Text = "Module Code:";
             // 
             // txtModuleDescription
             // 
-            this.txtModuleDescription.Location = new System.Drawing.Point(298, 355);
-            this.txtModuleDescription.Margin = new System.Windows.Forms.Padding(6);
+            this.txtModuleDescription.Location = new System.Drawing.Point(199, 227);
+            this.txtModuleDescription.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtModuleDescription.Name = "txtModuleDescription";
-            this.txtModuleDescription.Size = new System.Drawing.Size(416, 31);
+            this.txtModuleDescription.Size = new System.Drawing.Size(279, 22);
             this.txtModuleDescription.TabIndex = 8;
             // 
             // btnCancelModule
             // 
-            this.btnCancelModule.Location = new System.Drawing.Point(1331, 798);
-            this.btnCancelModule.Margin = new System.Windows.Forms.Padding(6);
+            this.btnCancelModule.Location = new System.Drawing.Point(887, 511);
+            this.btnCancelModule.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnCancelModule.Name = "btnCancelModule";
-            this.btnCancelModule.Size = new System.Drawing.Size(150, 44);
+            this.btnCancelModule.Size = new System.Drawing.Size(100, 28);
             this.btnCancelModule.TabIndex = 22;
             this.btnCancelModule.Text = "Cancel";
             this.btnCancelModule.UseVisualStyleBackColor = true;
@@ -316,10 +326,10 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(73, 41);
-            this.label4.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label4.Location = new System.Drawing.Point(49, 26);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(402, 44);
+            this.label4.Size = new System.Drawing.Size(213, 23);
             this.label4.TabIndex = 12;
             this.label4.Text = "Module Information:";
             this.label4.Click += new System.EventHandler(this.label4_Click);
@@ -329,69 +339,71 @@
             this.pnlSearch.Controls.Add(this.label11);
             this.pnlSearch.Controls.Add(this.txtSearch);
             this.pnlSearch.Controls.Add(this.btnSearchModule);
-            this.pnlSearch.Location = new System.Drawing.Point(847, 93);
-            this.pnlSearch.Margin = new System.Windows.Forms.Padding(6);
+            this.pnlSearch.Location = new System.Drawing.Point(565, 60);
+            this.pnlSearch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnlSearch.Name = "pnlSearch";
-            this.pnlSearch.Size = new System.Drawing.Size(634, 106);
+            this.pnlSearch.Size = new System.Drawing.Size(423, 68);
             this.pnlSearch.TabIndex = 14;
             // 
             // label11
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Dubai", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(24, 33);
-            this.label11.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label11.Location = new System.Drawing.Point(16, 21);
+            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(161, 44);
+            this.label11.Size = new System.Drawing.Size(83, 22);
             this.label11.TabIndex = 14;
             this.label11.Text = "Module Code:";
             // 
             // txtSearch
             // 
-            this.txtSearch.Location = new System.Drawing.Point(197, 38);
-            this.txtSearch.Margin = new System.Windows.Forms.Padding(6);
+            this.txtSearch.Location = new System.Drawing.Point(131, 24);
+            this.txtSearch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(196, 31);
+            this.txtSearch.Size = new System.Drawing.Size(132, 22);
             this.txtSearch.TabIndex = 13;
             this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
             // btnSearchModule
             // 
-            this.btnSearchModule.Location = new System.Drawing.Point(444, 29);
-            this.btnSearchModule.Margin = new System.Windows.Forms.Padding(6);
+            this.btnSearchModule.Location = new System.Drawing.Point(296, 19);
+            this.btnSearchModule.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSearchModule.Name = "btnSearchModule";
-            this.btnSearchModule.Size = new System.Drawing.Size(150, 44);
+            this.btnSearchModule.Size = new System.Drawing.Size(100, 28);
             this.btnSearchModule.TabIndex = 12;
             this.btnSearchModule.Text = "Search Student";
             this.btnSearchModule.UseVisualStyleBackColor = true;
+            this.btnSearchModule.Click += new System.EventHandler(this.btnSearchModule_Click);
             // 
             // dgvinfoModules
             // 
             this.dgvinfoModules.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvinfoModules.Location = new System.Drawing.Point(847, 256);
-            this.dgvinfoModules.Margin = new System.Windows.Forms.Padding(6);
+            this.dgvinfoModules.Location = new System.Drawing.Point(565, 164);
+            this.dgvinfoModules.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgvinfoModules.MultiSelect = false;
             this.dgvinfoModules.Name = "dgvinfoModules";
             this.dgvinfoModules.RowHeadersWidth = 82;
             this.dgvinfoModules.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvinfoModules.Size = new System.Drawing.Size(695, 497);
+            this.dgvinfoModules.Size = new System.Drawing.Size(463, 318);
             this.dgvinfoModules.TabIndex = 15;
             this.dgvinfoModules.SelectionChanged += new System.EventHandler(this.dgvinfoModules_SelectionChanged);
             // 
             // FrmModuleInformation
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(1574, 960);
+            this.ClientSize = new System.Drawing.Size(1049, 614);
             this.Controls.Add(this.dgvinfoModules);
             this.Controls.Add(this.pnlSearch);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.pnlStudentData);
             this.Controls.Add(this.btnCancelModule);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "FrmModuleInformation";
-            this.Padding = new System.Windows.Forms.Padding(35, 0, 40, 50);
+            this.Padding = new System.Windows.Forms.Padding(23, 0, 27, 32);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Module Information";
             this.Load += new System.EventHandler(this.FrmModuleInformation_Load);

@@ -63,10 +63,22 @@ namespace PRG282_Project_1.DB
             return executeSqlCommand(searchQuery);    
         }
 
+        public DataTable SearchModule(int modulecode)
+        {
+            string searchQuery = $"SELECT * FROM tblModule WHERE studentNumber = '{modulecode}'";
+            return executeSqlCommand(searchQuery);
+        }
+
         public DataTable DisplayAll()
         {
             string searchQuery = $"SELECT * FROM tblStudent";
             return executeSqlCommand(searchQuery);
+        }
+
+        public DataTable DisplayAllModule()
+        {
+            string searchQuery2 = $"SELECT * FROM tblModule";
+            return executeSqlCommand(searchQuery2);
         }
 
         public void Create(int studentNumber, string studentFirstName, string studentSurname, string studentDOB, object studentImage, string studentPhone, string studentAddress, string studentGender)
@@ -90,6 +102,23 @@ namespace PRG282_Project_1.DB
                 Sqlcon.Close();
         }
 
+        public void CreateModule(string moduleCode, string ModuleName, int NQFlvl, int credits, string moduleDesc)
+        {
+
+            string createModuleQuery = "INSERT INTO tblModule VALUES(@moduleCode,@ModuleName,@nqfLvl,@ModuleDesc)";
+            
+
+            SqlCommand cmd = new SqlCommand(createModuleQuery, this.Sqlcon);
+
+            Sqlcon.Open();
+            cmd.Parameters.AddWithValue("@moduleCode", moduleCode);
+            cmd.Parameters.AddWithValue("@ModuleName", ModuleName);
+            cmd.Parameters.AddWithValue("@nqfLvl", NQFlvl);
+            cmd.Parameters.AddWithValue("@ModuleDesc", moduleDesc);
+            cmd.ExecuteNonQuery();
+            Sqlcon.Close();
+        }
+
         public void Delete(int studentNumber) 
         {
             string deleteQuery = "DELETE FROM tblStudent WHERE studentNumber = @studentNumber";
@@ -104,6 +133,25 @@ namespace PRG282_Project_1.DB
                 Sqlcon.Close();
 
                 MessageBox.Show("Details for Student with ID: " + studentNumber + " has been deleted.", "Delete");
+            }
+
+
+        }
+
+        public void DeleteModule(string moduleCode)
+        {
+            string deleteQuery = "DELETE FROM tblModule WHERE moduleCode = @moduleCode";
+
+            if (MessageBox.Show("Are you sure you want to delete data for the Module with Code: " + moduleCode + "? this cannot be undone.", "Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+            {
+                SqlCommand cmd = new SqlCommand(deleteQuery, this.Sqlcon);
+
+                Sqlcon.Open();
+                cmd.Parameters.AddWithValue("@moduleCode", moduleCode);
+                cmd.ExecuteNonQuery();
+                Sqlcon.Close();
+
+                MessageBox.Show("Details for Module with the Code: " + moduleCode + " has been deleted.", "Delete");
             }
 
 
@@ -129,6 +177,26 @@ namespace PRG282_Project_1.DB
             Sqlcon.Close();
 
             MessageBox.Show("Details for Student with ID: " + studentNumber + " has been updated.", "Update");
+
+        }
+
+        public void UpdateModules(string moduleCode, string ModuleName, int NQFlvl, int credits, string moduleDesc)
+        {
+            string createQuery = "UPDATE tblModule SET moduleCode = @moduleCode, ModuleName = @ModuleName, NQFlvl = @nqfLvl, credits= @Credits, moduleDesc = @ModuleDesc";
+
+            SqlCommand cmd = new SqlCommand(createQuery, this.Sqlcon);
+
+            Sqlcon.Open();
+            cmd.Parameters.AddWithValue("@moduleCode", moduleCode);
+            cmd.Parameters.AddWithValue("@ModuleName", ModuleName);
+            cmd.Parameters.AddWithValue("@nqfLvl", NQFlvl);
+            cmd.Parameters.AddWithValue("@ModuleDesc", moduleDesc);
+           
+           
+            cmd.ExecuteNonQuery();
+            Sqlcon.Close();
+
+            MessageBox.Show("Details for Module with Code: " + moduleCode + " has been updated.", "Update");
 
         }
 

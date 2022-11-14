@@ -299,5 +299,9 @@ namespace PRG282_Project_1
 
         }
 
+        private void FrmStudentInformation_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Environment.Exit(0);
+        }
     }
 }

@@ -27,7 +27,6 @@ D:\VisualStudio\PRG282\Project\PRG-281-Project-1\PRG282_Project_1\PRG282_Project
 D:\VisualStudio\PRG282\Project\PRG-281-Project-1\PRG282_Project_1\PRG282_Project_1\obj\Debug\PRG282_Project_1.csproj.AssemblyReference.cache
 D:\VisualStudio\PRG282\Project\PRG-281-Project-1\PRG282_Project_1\PRG282_Project_1\obj\Debug\PRG282_Project_1.csproj.SuggestedBindingRedirects.cache
 D:\VisualStudio\PRG282\Project\PRG-281-Project-1\PRG282_Project_1\PRG282_Project_1\obj\Debug\PRG282_Project_1.frmLogin.resources
-D:\VisualStudio\PRG282\Project\PRG-281-Project-1\PRG282_Project_1\PRG282_Project_1\obj\Debug\PRG282_Project_1.MainMenu.resources
 D:\VisualStudio\PRG282\Project\PRG-281-Project-1\PRG282_Project_1\PRG282_Project_1\obj\Debug\PRG282_Project_1.Properties.Resources.resources
 D:\VisualStudio\PRG282\Project\PRG-281-Project-1\PRG282_Project_1\PRG282_Project_1\obj\Debug\PRG282_Project_1.csproj.GenerateResource.cache
 D:\VisualStudio\PRG282\Project\PRG-281-Project-1\PRG282_Project_1\PRG282_Project_1\obj\Debug\PRG282_Project_1.csproj.CoreCompileInputs.cache
@@ -86,3 +85,8 @@ C:\Belgium\Year 2\PRG282\PRG-282-Project-1\PRG282_Project_1\PRG282_Project_1\obj
 C:\Belgium\Year 2\PRG282\PRG-282-Project-1\PRG282_Project_1\PRG282_Project_1\obj\Debug\PRG282_Project_1.csproj.CoreCompileInputs.cache
 C:\Belgium\Year 2\PRG282\PRG-282-Project-1\PRG282_Project_1\PRG282_Project_1\obj\Debug\PRG282_Project_1.exe
 C:\Belgium\Year 2\PRG282\PRG-282-Project-1\PRG282_Project_1\PRG282_Project_1\obj\Debug\PRG282_Project_1.pdb
+D:\VisualStudio\PRG282\Project\PRG-281-Project-1\PRG282_Project_1\PRG282_Project_1\bin\Debug\DB\BelgiumCampusDB.mdf
+D:\VisualStudio\PRG282\Project\PRG-281-Project-1\PRG282_Project_1\PRG282_Project_1\bin\Debug\DB\BelgiumCampusDB_log.ldf
+D:\VisualStudio\PRG282\Project\PRG-281-Project-1\PRG282_Project_1\PRG282_Project_1\obj\Debug\PRG282_Project_1.FrmMainMenu.resources
+D:\VisualStudio\PRG282\Project\PRG-281-Project-1\PRG282_Project_1\PRG282_Project_1\obj\Debug\PRG282_Project_1.FrmModuleInformation.resources
+D:\VisualStudio\PRG282\Project\PRG-281-Project-1\PRG282_Project_1\PRG282_Project_1\obj\Debug\PRG282_Project_1.FrmStudentInformation.resources

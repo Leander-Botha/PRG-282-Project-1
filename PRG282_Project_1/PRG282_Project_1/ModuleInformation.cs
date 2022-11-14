@@ -176,7 +176,7 @@ namespace PRG282_Project_1
             {
 
                 dbc.CreateModule(txtModuleCode.Text, txtModuleName.Text, int.Parse(txtNQFlevel.Text), int.Parse(txtCredits.Text), txtModuleDescription.Text);
-                MessageBox.Show("Module sucessfully created");
+                
                 dgvinfoModules.DataSource = dbc.DisplayAllModule();
 
             }
@@ -226,6 +226,11 @@ namespace PRG282_Project_1
         private void txtCredits_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void FrmModuleInformation_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

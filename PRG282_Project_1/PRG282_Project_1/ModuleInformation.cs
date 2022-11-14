@@ -209,5 +209,16 @@ namespace PRG282_Project_1
                 MessageBox.Show(err.Message);
             }
         }
+
+        private void btnClearFrm_Click(object sender, EventArgs e)
+        {
+            txtModuleCode.Clear();
+            txtModuleName.Clear();
+            txtNQFlevel.Clear();
+            txtCredits.Clear();
+            txtModuleDescription.Clear();
+            lbDisplayLinks.Items.Clear();
+            txtSearch.Clear();
+        }
     }
 }

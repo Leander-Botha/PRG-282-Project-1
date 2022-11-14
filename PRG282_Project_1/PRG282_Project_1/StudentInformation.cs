@@ -66,6 +66,17 @@ namespace PRG282_Project_1
             {
                 cbxModules.Items.Add(module[0]);
             }
+
+            txtStudentNr.Clear();
+            txtName.Clear();
+            txtSurname.Clear();
+            picStudent.Image = Properties.Resources._default;
+            dtpStudent.Value = DateTime.Now;
+            cbxGender.SelectedIndex = -1;
+            txtPhone.Clear();
+            txtAddress.Clear();
+            lbDisplayModules.Items.Clear();
+            txtSearch.Clear();
         }
 
         private void label11_Click(object sender, EventArgs e)

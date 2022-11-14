@@ -164,8 +164,10 @@ namespace PRG282_Project_1
             txtModuleDescription.Clear();
             txtModuleName.Clear();
             txtNQFlevel.Clear();
+            txtCredits.Clear();
             txtSearch.Clear();
-           
+            lbDisplayLinks.Items.Clear();
+
         }
 
         private void btnCreateModule_Click(object sender, EventArgs e)
@@ -219,6 +221,11 @@ namespace PRG282_Project_1
             txtModuleDescription.Clear();
             lbDisplayLinks.Items.Clear();
             txtSearch.Clear();
+        }
+
+        private void txtCredits_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -94,7 +94,7 @@
             this.pnlStudentData.Controls.Add(this.label1);
             this.pnlStudentData.Controls.Add(this.txtModuleDescription);
             this.pnlStudentData.Location = new System.Drawing.Point(22, 60);
-            this.pnlStudentData.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnlStudentData.Margin = new System.Windows.Forms.Padding(4);
             this.pnlStudentData.Name = "pnlStudentData";
             this.pnlStudentData.Size = new System.Drawing.Size(509, 525);
             this.pnlStudentData.TabIndex = 10;
@@ -108,9 +108,9 @@
             this.groupBox1.Controls.Add(this.btnAddLInk);
             this.groupBox1.Controls.Add(this.txtLinks);
             this.groupBox1.Location = new System.Drawing.Point(20, 273);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox1.Size = new System.Drawing.Size(469, 167);
             this.groupBox1.TabIndex = 36;
             this.groupBox1.TabStop = false;
@@ -118,7 +118,7 @@
             // btnRemoveLink
             // 
             this.btnRemoveLink.Location = new System.Drawing.Point(347, 125);
-            this.btnRemoveLink.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnRemoveLink.Margin = new System.Windows.Forms.Padding(4);
             this.btnRemoveLink.Name = "btnRemoveLink";
             this.btnRemoveLink.Size = new System.Drawing.Size(100, 28);
             this.btnRemoveLink.TabIndex = 35;
@@ -145,7 +145,7 @@
             this.lbDisplayLinks.FormattingEnabled = true;
             this.lbDisplayLinks.ItemHeight = 16;
             this.lbDisplayLinks.Location = new System.Drawing.Point(145, 61);
-            this.lbDisplayLinks.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.lbDisplayLinks.Margin = new System.Windows.Forms.Padding(2);
             this.lbDisplayLinks.Name = "lbDisplayLinks";
             this.lbDisplayLinks.Size = new System.Drawing.Size(303, 36);
             this.lbDisplayLinks.TabIndex = 32;
@@ -156,7 +156,7 @@
             // btnAddLInk
             // 
             this.btnAddLInk.Location = new System.Drawing.Point(373, 17);
-            this.btnAddLInk.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAddLInk.Margin = new System.Windows.Forms.Padding(4);
             this.btnAddLInk.Name = "btnAddLInk";
             this.btnAddLInk.Size = new System.Drawing.Size(83, 28);
             this.btnAddLInk.TabIndex = 34;
@@ -167,7 +167,7 @@
             // txtLinks
             // 
             this.txtLinks.Location = new System.Drawing.Point(145, 21);
-            this.txtLinks.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtLinks.Margin = new System.Windows.Forms.Padding(2);
             this.txtLinks.Name = "txtLinks";
             this.txtLinks.Size = new System.Drawing.Size(214, 22);
             this.txtLinks.TabIndex = 33;
@@ -176,7 +176,7 @@
             // txtCredits
             // 
             this.txtCredits.Location = new System.Drawing.Point(199, 180);
-            this.txtCredits.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCredits.Margin = new System.Windows.Forms.Padding(2);
             this.txtCredits.Name = "txtCredits";
             this.txtCredits.Size = new System.Drawing.Size(132, 22);
             this.txtCredits.TabIndex = 31;
@@ -185,7 +185,7 @@
             // txtNQFlevel
             // 
             this.txtNQFlevel.Location = new System.Drawing.Point(199, 130);
-            this.txtNQFlevel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNQFlevel.Margin = new System.Windows.Forms.Padding(2);
             this.txtNQFlevel.Name = "txtNQFlevel";
             this.txtNQFlevel.Size = new System.Drawing.Size(132, 22);
             this.txtNQFlevel.TabIndex = 30;
@@ -215,7 +215,7 @@
             // btnRead
             // 
             this.btnRead.Location = new System.Drawing.Point(145, 467);
-            this.btnRead.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnRead.Margin = new System.Windows.Forms.Padding(4);
             this.btnRead.Name = "btnRead";
             this.btnRead.Size = new System.Drawing.Size(100, 28);
             this.btnRead.TabIndex = 25;
@@ -226,7 +226,7 @@
             // btnDeleteModule
             // 
             this.btnDeleteModule.Location = new System.Drawing.Point(382, 467);
-            this.btnDeleteModule.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnDeleteModule.Margin = new System.Windows.Forms.Padding(4);
             this.btnDeleteModule.Name = "btnDeleteModule";
             this.btnDeleteModule.Size = new System.Drawing.Size(100, 28);
             this.btnDeleteModule.TabIndex = 23;
@@ -237,7 +237,7 @@
             // btnUpdateModule
             // 
             this.btnUpdateModule.Location = new System.Drawing.Point(265, 467);
-            this.btnUpdateModule.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnUpdateModule.Margin = new System.Windows.Forms.Padding(4);
             this.btnUpdateModule.Name = "btnUpdateModule";
             this.btnUpdateModule.Size = new System.Drawing.Size(100, 28);
             this.btnUpdateModule.TabIndex = 14;
@@ -248,7 +248,7 @@
             // txtModuleName
             // 
             this.txtModuleName.Location = new System.Drawing.Point(199, 81);
-            this.txtModuleName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtModuleName.Margin = new System.Windows.Forms.Padding(4);
             this.txtModuleName.Name = "txtModuleName";
             this.txtModuleName.Size = new System.Drawing.Size(132, 22);
             this.txtModuleName.TabIndex = 20;
@@ -267,7 +267,7 @@
             // btnCreateModule
             // 
             this.btnCreateModule.Location = new System.Drawing.Point(27, 467);
-            this.btnCreateModule.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCreateModule.Margin = new System.Windows.Forms.Padding(4);
             this.btnCreateModule.Name = "btnCreateModule";
             this.btnCreateModule.Size = new System.Drawing.Size(100, 28);
             this.btnCreateModule.TabIndex = 10;
@@ -278,7 +278,7 @@
             // txtModuleCode
             // 
             this.txtModuleCode.Location = new System.Drawing.Point(199, 33);
-            this.txtModuleCode.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtModuleCode.Margin = new System.Windows.Forms.Padding(4);
             this.txtModuleCode.Name = "txtModuleCode";
             this.txtModuleCode.Size = new System.Drawing.Size(132, 22);
             this.txtModuleCode.TabIndex = 11;
@@ -308,7 +308,7 @@
             // txtModuleDescription
             // 
             this.txtModuleDescription.Location = new System.Drawing.Point(199, 227);
-            this.txtModuleDescription.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtModuleDescription.Margin = new System.Windows.Forms.Padding(4);
             this.txtModuleDescription.Name = "txtModuleDescription";
             this.txtModuleDescription.Size = new System.Drawing.Size(279, 22);
             this.txtModuleDescription.TabIndex = 8;
@@ -316,11 +316,11 @@
             // btnCancelModule
             // 
             this.btnCancelModule.Location = new System.Drawing.Point(887, 511);
-            this.btnCancelModule.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCancelModule.Margin = new System.Windows.Forms.Padding(4);
             this.btnCancelModule.Name = "btnCancelModule";
             this.btnCancelModule.Size = new System.Drawing.Size(100, 28);
             this.btnCancelModule.TabIndex = 22;
-            this.btnCancelModule.Text = "Cancel";
+            this.btnCancelModule.Text = "Back";
             this.btnCancelModule.UseVisualStyleBackColor = true;
             this.btnCancelModule.Click += new System.EventHandler(this.btnCancelModule_Click);
             // 
@@ -342,7 +342,7 @@
             this.pnlSearch.Controls.Add(this.txtSearch);
             this.pnlSearch.Controls.Add(this.btnSearchModule);
             this.pnlSearch.Location = new System.Drawing.Point(565, 60);
-            this.pnlSearch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnlSearch.Margin = new System.Windows.Forms.Padding(4);
             this.pnlSearch.Name = "pnlSearch";
             this.pnlSearch.Size = new System.Drawing.Size(423, 68);
             this.pnlSearch.TabIndex = 14;
@@ -361,7 +361,7 @@
             // txtSearch
             // 
             this.txtSearch.Location = new System.Drawing.Point(131, 24);
-            this.txtSearch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtSearch.Margin = new System.Windows.Forms.Padding(4);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(132, 22);
             this.txtSearch.TabIndex = 13;
@@ -370,7 +370,7 @@
             // btnSearchModule
             // 
             this.btnSearchModule.Location = new System.Drawing.Point(296, 19);
-            this.btnSearchModule.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSearchModule.Margin = new System.Windows.Forms.Padding(4);
             this.btnSearchModule.Name = "btnSearchModule";
             this.btnSearchModule.Size = new System.Drawing.Size(100, 28);
             this.btnSearchModule.TabIndex = 12;
@@ -380,21 +380,26 @@
             // 
             // dgvinfoModules
             // 
+            this.dgvinfoModules.AllowUserToAddRows = false;
+            this.dgvinfoModules.AllowUserToDeleteRows = false;
             this.dgvinfoModules.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvinfoModules.Location = new System.Drawing.Point(565, 164);
-            this.dgvinfoModules.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvinfoModules.Margin = new System.Windows.Forms.Padding(4);
             this.dgvinfoModules.MultiSelect = false;
             this.dgvinfoModules.Name = "dgvinfoModules";
+            this.dgvinfoModules.ReadOnly = true;
             this.dgvinfoModules.RowHeadersWidth = 82;
             this.dgvinfoModules.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvinfoModules.ShowEditingIcon = false;
             this.dgvinfoModules.Size = new System.Drawing.Size(463, 318);
             this.dgvinfoModules.TabIndex = 15;
+            this.dgvinfoModules.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvinfoModules_CellClick);
             this.dgvinfoModules.SelectionChanged += new System.EventHandler(this.dgvinfoModules_SelectionChanged);
             // 
             // btnClearFrm
             // 
             this.btnClearFrm.Location = new System.Drawing.Point(431, 26);
-            this.btnClearFrm.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnClearFrm.Margin = new System.Windows.Forms.Padding(4);
             this.btnClearFrm.Name = "btnClearFrm";
             this.btnClearFrm.Size = new System.Drawing.Size(100, 28);
             this.btnClearFrm.TabIndex = 24;
@@ -415,7 +420,7 @@
             this.Controls.Add(this.label10);
             this.Controls.Add(this.pnlStudentData);
             this.Controls.Add(this.btnCancelModule);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FrmModuleInformation";
             this.Padding = new System.Windows.Forms.Padding(23, 0, 27, 32);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

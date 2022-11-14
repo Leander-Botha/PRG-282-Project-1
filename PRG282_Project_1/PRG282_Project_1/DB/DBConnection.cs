@@ -57,7 +57,7 @@ namespace PRG282_Project_1.DB
             return executeSqlCommand(searchQuery);    
         }
 
-        public DataTable SearchModule(int modulecode)
+        public DataTable SearchModule(string modulecode)
         {
             string searchQuery = $"SearchModule '{modulecode}'";
             return executeSqlCommand(searchQuery);
@@ -73,6 +73,35 @@ namespace PRG282_Project_1.DB
         {
             string searchQuery2 = $"ViewAllModules";
             return executeSqlCommand(searchQuery2);
+        }
+
+        public DataTable DisplayStudentModule(string studentNumber)
+        {
+            string searchQuery = "ViewStudentModule "+studentNumber;
+            return executeSqlCommand(searchQuery);
+        }
+
+        public DataTable RemoveStudentModule(string studentNumber, string moduleCode)
+        {
+            string RemoveQuery = $"RemoveStudentModule "+studentNumber +","+moduleCode;
+            return executeSqlCommand(RemoveQuery);
+        }
+
+        public DataTable AddStudentModule(string studentNumber, string moduleCode)
+        {
+            string RemoveQuery = $"AddStudentModule " + studentNumber + "," + moduleCode;
+            return executeSqlCommand(RemoveQuery);
+        }
+
+        public DataTable GetLinks(string moduleCode)
+        {
+            string GetQuery = $"GetLink " + moduleCode;
+            return executeSqlCommand(GetQuery);
+        }
+        public DataTable Addink(string linkURL, string moduleCode)
+        {
+            string AddQuery = $"AddLink '" + linkURL +"',"+ moduleCode;
+            return executeSqlCommand(AddQuery);
         }
 
         public void Create(int studentNumber, string studentFirstName, string studentSurname, string studentDOB, object studentImage, string studentPhone, string studentAddress, string studentGender)
@@ -122,8 +151,6 @@ namespace PRG282_Project_1.DB
             {
                 if (Sqlcon != null) { Sqlcon.Close(); }
             }
-
-
         }
 
         public void Delete(int studentNumber) 
@@ -152,9 +179,20 @@ namespace PRG282_Project_1.DB
 
                 MessageBox.Show("Details for Module with the Code: " + moduleCode + " has been deleted.", "Delete");
             }
+        }
 
+        public void DeleteLink(string linkURL,string moduleCode)
+        {
+            string deleteQuery = "DeleteLink '" + linkURL + "'," +moduleCode;
 
+            if (MessageBox.Show("Are you sure you want to delete the link for the Module with Code: " + moduleCode + "? this cannot be undone.", "Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+            {
+                SqlCommand cmd = new SqlCommand(deleteQuery, this.Sqlcon);
 
+                executeSqlCommand(deleteQuery);
+
+                MessageBox.Show("Link for Module with the Code: " + moduleCode + " has been deleted.", "Delete");
+            }
         }
 
         public void Update(int studentNumber, string studentFirstName, string studentSurname, string studentDOB, object studentImage, string studentPhone, string studentAddress, string studentGender) 
@@ -196,7 +234,6 @@ namespace PRG282_Project_1.DB
             Sqlcon.Close();
 
             MessageBox.Show("Details for Module with Code: " + moduleCode + " has been updated.", "Update");
-
         }
 
         //Converts an image to bytes and returns the bytes to be stored in the database.
@@ -205,7 +242,6 @@ namespace PRG282_Project_1.DB
             var image = new ImageConverter().ConvertTo(picStudent.Image, typeof(byte[]));
             return image;
         }
-
 
     }
 }

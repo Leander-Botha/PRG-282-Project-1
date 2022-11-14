@@ -38,7 +38,7 @@ namespace PRG282_Project_1
         {
             this.Hide();
             FrmMainMenu mm = new FrmMainMenu();
-            mm.Show();
+            mm.ShowDialog();
         }
 
         private void btnDeleteModule_Click(object sender, EventArgs e)
@@ -56,11 +56,10 @@ namespace PRG282_Project_1
 
         private void btnRead_Click(object sender, EventArgs e)
         {
-            DBConnection dbc = new DBConnection();
-            string command = "SELECT tblModule.moduleCode,tblModule.moduleName,tblModule.moduleNQFLevel, tblModule.moduleCredits, tblModule.moduleDescription, tblLink.linkURL FROM tblModule INNER JOIN tblLink ON tblModule.moduleCode=tblLink.moduleCode order by tblModule.moduleCode;";
+            //DBConnection dbc = new DBConnection();
 
-            DataTable studentDT = dbc.executeSqlCommand(command);
-
+            DataTable studentDT = dbc.DisplayAllModule();
+            btnClearFrm_Click(sender, e);
             dgvinfoModules.DataSource = studentDT;
         }
 
@@ -83,15 +82,36 @@ namespace PRG282_Project_1
         {
             if (txtLinks.Text == "")
             {
-                MessageBox.Show("Please enter a link!");
+                MessageBox.Show("Please enter a link");
+                txtLinks.Focus();
+                return;
             }
 
-            else
+            if (txtModuleCode.Text == "")
             {
+                MessageBox.Show("Please enter a module code");
+                txtModuleCode.Focus();
+                return;
+            }
+
+            DataTable dt = dbc.SearchModule(txtModuleCode.Text);
+            if (dt.Rows.Count != 1)
+            {
+                MessageBox.Show("Please enter a valid module code");
+                txtModuleCode.Focus();
+                return;
+            }
+
+            try
+            {
+                dbc.Addink(txtLinks.Text, txtModuleCode.Text);
+            }
+            catch (Exception err ) 
+            {
+                MessageBox.Show(err.Message);
+            }
                 lbDisplayLinks.Items.Add(txtLinks.Text);
                 txtLinks.Clear();
-
-            }
            
         }
 
@@ -104,8 +124,27 @@ namespace PRG282_Project_1
 
         private void btnRemoveLink_Click(object sender, EventArgs e)
         {
+            if (txtModuleCode.Text == "")
+            {
+                MessageBox.Show("Please enter a module code");
+                txtModuleCode.Focus();
+                return;
+            }
+
+            DataTable dt = dbc.SearchModule(txtModuleCode.Text);
+            if (dt.Rows.Count != 1)
+            {
+                MessageBox.Show("Please enter a valid module code");
+                txtModuleCode.Focus();
+                return;
+            }
+
             if (lbDisplayLinks.SelectedIndex >= 0)
+            {
+                dbc.DeleteLink(lbDisplayLinks.SelectedItem.ToString(), txtModuleCode.Text);
                 lbDisplayLinks.Items.RemoveAt(lbDisplayLinks.SelectedIndex);
+            }
+                
         }
 
         private void lbDisplayLinks_MouseDoubleClick(object sender, MouseEventArgs e)
@@ -124,31 +163,31 @@ namespace PRG282_Project_1
 
         private void dgvinfoModules_SelectionChanged(object sender, EventArgs e)
         {
-            if (dgvinfoModules.SelectedRows.Count > 0)
-            {
-                txtModuleCode.Text = dgvinfoModules.SelectedRows[0].Cells[0].Value.ToString();
-                txtModuleName.Text = dgvinfoModules.SelectedRows[0].Cells[1].Value.ToString();
-                txtNQFlevel.Text = dgvinfoModules.SelectedRows[0].Cells[2].Value.ToString();
-                txtCredits.Text = dgvinfoModules.SelectedRows[0].Cells[3].Value.ToString();
-                txtModuleDescription.Text = dgvinfoModules.SelectedRows[0].Cells[4].Value.ToString();
+            //if (dgvinfoModules.SelectedRows.Count > 0)
+            //{
+            //    txtModuleCode.Text = dgvinfoModules.SelectedRows[0].Cells[0].Value.ToString();
+            //    txtModuleName.Text = dgvinfoModules.SelectedRows[0].Cells[1].Value.ToString();
+            //    txtNQFlevel.Text = dgvinfoModules.SelectedRows[0].Cells[2].Value.ToString();
+            //    txtCredits.Text = dgvinfoModules.SelectedRows[0].Cells[3].Value.ToString();
+            //    txtModuleDescription.Text = dgvinfoModules.SelectedRows[0].Cells[4].Value.ToString();
 
 
-                string command = "Select linkURL from tblLink where moduleCode = " + txtModuleCode.Text + "";
+            //    string command = "Select linkURL from tblLink where moduleCode = " + txtModuleCode.Text + "";
 
-                DataTable DT = dbc.executeSqlCommand(command);
+            //    DataTable DT = dbc.executeSqlCommand(command);
 
-                lbDisplayLinks.Items.Clear();
+            //    lbDisplayLinks.Items.Clear();
 
-                if (DT != null)
-                {
-                    foreach (var link in DT.AsEnumerable())
-                    {
-                        lbDisplayLinks.Items.Add(link[0]);
-                    }
+            //    if (DT != null)
+            //    {
+            //        foreach (var link in DT.AsEnumerable())
+            //        {
+            //            lbDisplayLinks.Items.Add(link[0]);
+            //        }
 
-                }
+            //    }
 
-            }
+            //}
         }
 
         private void FrmModuleInformation_Load(object sender, EventArgs e)
@@ -190,7 +229,7 @@ namespace PRG282_Project_1
         {
             try
             {
-                dgvinfoModules.DataSource = dbc.SearchModule(int.Parse(txtSearch.Text));
+                dgvinfoModules.DataSource = dbc.SearchModule(txtSearch.Text);
             }
             catch (Exception err)
             {
@@ -231,6 +270,42 @@ namespace PRG282_Project_1
         private void FrmModuleInformation_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
+        }
+
+        private void dgvinfoModules_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dgvinfoModules.SelectedRows.Count > 0)
+            {
+                txtModuleCode.Text = dgvinfoModules.SelectedRows[0].Cells[0].Value.ToString();
+                txtModuleName.Text = dgvinfoModules.SelectedRows[0].Cells[1].Value.ToString();
+                txtNQFlevel.Text = dgvinfoModules.SelectedRows[0].Cells[2].Value.ToString();
+                txtCredits.Text = dgvinfoModules.SelectedRows[0].Cells[3].Value.ToString();
+                txtModuleDescription.Text = dgvinfoModules.SelectedRows[0].Cells[4].Value.ToString();
+
+
+                //string command = "Select linkURL from tblLink where moduleCode = " + txtModuleCode.Text + "";
+
+                DataTable DT = dbc.GetLinks(txtModuleCode.Text);
+
+                lbDisplayLinks.Items.Clear();
+
+                if (DT != null)
+                {
+                    for (int i = 0; i < DT.Rows.Count; i++)
+                    {
+                        lbDisplayLinks.Items.Add(DT.Rows[i][0]);
+                    }
+                }
+
+                //if (DT != null)
+                //{
+                //    foreach (var link in DT.AsEnumerable())
+                //    {
+                //        lbDisplayLinks.Items.Add(link[0]);
+                //    }
+                //}
+
+            }
         }
     }
 }

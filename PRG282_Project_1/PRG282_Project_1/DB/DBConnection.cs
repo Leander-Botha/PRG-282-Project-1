@@ -65,7 +65,7 @@ namespace PRG282_Project_1.DB
 
         public DataTable SearchModule(int modulecode)
         {
-            string searchQuery = $"SELECT * FROM tblModule WHERE studentNumber = '{modulecode}'";
+            string searchQuery = $"SELECT * FROM tblModule WHERE moduleCode = '{modulecode}'";
             return executeSqlCommand(searchQuery);
         }
 
@@ -105,7 +105,7 @@ namespace PRG282_Project_1.DB
         public void CreateModule(string moduleCode, string ModuleName, int NQFlvl, int credits, string moduleDesc)
         {
 
-            string createModuleQuery = "INSERT INTO tblModule VALUES(@moduleCode,@ModuleName,@nqfLvl,@ModuleDesc)";
+            string createModuleQuery = "INSERT INTO tblModule VALUES(@moduleCode,@ModuleName,@nqfLvl,@credits,@ModuleDesc)";
             
 
             SqlCommand cmd = new SqlCommand(createModuleQuery, this.Sqlcon);
@@ -114,6 +114,7 @@ namespace PRG282_Project_1.DB
             cmd.Parameters.AddWithValue("@moduleCode", moduleCode);
             cmd.Parameters.AddWithValue("@ModuleName", ModuleName);
             cmd.Parameters.AddWithValue("@nqfLvl", NQFlvl);
+            cmd.Parameters.AddWithValue("@credits", credits);
             cmd.Parameters.AddWithValue("@ModuleDesc", moduleDesc);
             cmd.ExecuteNonQuery();
             Sqlcon.Close();

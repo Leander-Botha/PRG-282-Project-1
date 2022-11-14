@@ -46,7 +46,7 @@ namespace PRG282_Project_1
             try
             {
                 dbc.DeleteModule(txtModuleCode.Text);
-                dgvinfoModules.DataSource = dbc.DisplayAll();
+                dgvinfoModules.DataSource = dbc.DisplayAllModule();
             }
             catch (Exception err)
             {
@@ -174,8 +174,8 @@ namespace PRG282_Project_1
             {
 
                 dbc.CreateModule(txtModuleCode.Text, txtModuleName.Text, int.Parse(txtNQFlevel.Text), int.Parse(txtCredits.Text), txtModuleDescription.Text);
-                MessageBox.Show("Student sucessfully created");
-                dgvinfoModules.DataSource = dbc.DisplayAll();
+                MessageBox.Show("Module sucessfully created");
+                dgvinfoModules.DataSource = dbc.DisplayAllModule();
 
             }
             catch (Exception err)
@@ -202,7 +202,7 @@ namespace PRG282_Project_1
             try
             {
                 dbc.UpdateModules(txtModuleCode.Text, txtModuleName.Text, int.Parse(txtNQFlevel.Text), int.Parse(txtCredits.Text),txtModuleDescription.Text);
-                dgvinfoModules.DataSource = dbc.DisplayAll();
+                dgvinfoModules.DataSource = dbc.DisplayAllModule();
             }
             catch (Exception err)
             {

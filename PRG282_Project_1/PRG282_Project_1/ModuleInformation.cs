@@ -31,7 +31,7 @@ namespace PRG282_Project_1
 
         private void txtSearch_TextChanged(object sender, EventArgs e)
         {
-
+            dgvinfoModules.DataSource = dbc.DisplayAllModule();
         }
 
         private void btnCancelModule_Click(object sender, EventArgs e)
@@ -47,7 +47,7 @@ namespace PRG282_Project_1
             {
                 dbc.DeleteModule(txtModuleCode.Text);
                 dgvinfoModules.DataSource = dbc.DisplayAllModule();
-            }
+            }   
             catch (Exception err)
             {
                 MessageBox.Show(err.Message);
@@ -56,11 +56,9 @@ namespace PRG282_Project_1
 
         private void btnRead_Click(object sender, EventArgs e)
         {
-            //DBConnection dbc = new DBConnection();
 
-            DataTable studentDT = dbc.DisplayAllModule();
             btnClearFrm_Click(sender, e);
-            dgvinfoModules.DataSource = studentDT;
+            dgvinfoModules.DataSource = dbc.DisplayAllModule();
         }
 
         private void pnlStudentData_Paint(object sender, PaintEventArgs e)
@@ -163,31 +161,7 @@ namespace PRG282_Project_1
 
         private void dgvinfoModules_SelectionChanged(object sender, EventArgs e)
         {
-            //if (dgvinfoModules.SelectedRows.Count > 0)
-            //{
-            //    txtModuleCode.Text = dgvinfoModules.SelectedRows[0].Cells[0].Value.ToString();
-            //    txtModuleName.Text = dgvinfoModules.SelectedRows[0].Cells[1].Value.ToString();
-            //    txtNQFlevel.Text = dgvinfoModules.SelectedRows[0].Cells[2].Value.ToString();
-            //    txtCredits.Text = dgvinfoModules.SelectedRows[0].Cells[3].Value.ToString();
-            //    txtModuleDescription.Text = dgvinfoModules.SelectedRows[0].Cells[4].Value.ToString();
 
-
-            //    string command = "Select linkURL from tblLink where moduleCode = " + txtModuleCode.Text + "";
-
-            //    DataTable DT = dbc.executeSqlCommand(command);
-
-            //    lbDisplayLinks.Items.Clear();
-
-            //    if (DT != null)
-            //    {
-            //        foreach (var link in DT.AsEnumerable())
-            //        {
-            //            lbDisplayLinks.Items.Add(link[0]);
-            //        }
-
-            //    }
-
-            //}
         }
 
         private void FrmModuleInformation_Load(object sender, EventArgs e)
@@ -242,7 +216,7 @@ namespace PRG282_Project_1
         {
             try
             {
-                dbc.UpdateModules(txtModuleCode.Text, txtModuleName.Text, int.Parse(txtNQFlevel.Text), int.Parse(txtCredits.Text),txtModuleDescription.Text);
+                dbc.UpdateModules(txtModuleCode.Text, txtModuleName.Text, int.Parse(txtNQFlevel.Text), txtModuleDescription.Text, int.Parse(txtCredits.Text));
                 dgvinfoModules.DataSource = dbc.DisplayAllModule();
             }
             catch (Exception err)
@@ -283,8 +257,6 @@ namespace PRG282_Project_1
                 txtModuleDescription.Text = dgvinfoModules.SelectedRows[0].Cells[4].Value.ToString();
 
 
-                //string command = "Select linkURL from tblLink where moduleCode = " + txtModuleCode.Text + "";
-
                 DataTable DT = dbc.GetLinks(txtModuleCode.Text);
 
                 lbDisplayLinks.Items.Clear();
@@ -297,13 +269,6 @@ namespace PRG282_Project_1
                     }
                 }
 
-                //if (DT != null)
-                //{
-                //    foreach (var link in DT.AsEnumerable())
-                //    {
-                //        lbDisplayLinks.Items.Add(link[0]);
-                //    }
-                //}
 
             }
         }

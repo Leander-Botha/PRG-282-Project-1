@@ -38,19 +38,19 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Century", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(135, 121);
-            this.label10.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label10.Location = new System.Drawing.Point(68, 63);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(813, 44);
+            this.label10.Size = new System.Drawing.Size(430, 23);
             this.label10.TabIndex = 10;
             this.label10.Text = "Student And Module Information Manager";
             this.label10.Click += new System.EventHandler(this.label10_Click);
             // 
             // btnStudentInfoManager
             // 
-            this.btnStudentInfoManager.Location = new System.Drawing.Point(376, 290);
+            this.btnStudentInfoManager.Location = new System.Drawing.Point(188, 151);
+            this.btnStudentInfoManager.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnStudentInfoManager.Name = "btnStudentInfoManager";
-            this.btnStudentInfoManager.Size = new System.Drawing.Size(318, 91);
+            this.btnStudentInfoManager.Size = new System.Drawing.Size(159, 47);
             this.btnStudentInfoManager.TabIndex = 11;
             this.btnStudentInfoManager.Text = "Manage Student Information";
             this.btnStudentInfoManager.UseVisualStyleBackColor = true;
@@ -58,9 +58,10 @@
             // 
             // btnModuleInfoManager
             // 
-            this.btnModuleInfoManager.Location = new System.Drawing.Point(376, 418);
+            this.btnModuleInfoManager.Location = new System.Drawing.Point(188, 217);
+            this.btnModuleInfoManager.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnModuleInfoManager.Name = "btnModuleInfoManager";
-            this.btnModuleInfoManager.Size = new System.Drawing.Size(318, 91);
+            this.btnModuleInfoManager.Size = new System.Drawing.Size(159, 47);
             this.btnModuleInfoManager.TabIndex = 12;
             this.btnModuleInfoManager.Text = "Manage Module Information";
             this.btnModuleInfoManager.UseVisualStyleBackColor = true;
@@ -68,9 +69,10 @@
             // 
             // btnExit
             // 
-            this.btnExit.Location = new System.Drawing.Point(376, 549);
+            this.btnExit.Location = new System.Drawing.Point(188, 285);
+            this.btnExit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(318, 91);
+            this.btnExit.Size = new System.Drawing.Size(159, 47);
             this.btnExit.TabIndex = 13;
             this.btnExit.Text = "Exit";
             this.btnExit.UseVisualStyleBackColor = true;
@@ -78,16 +80,18 @@
             // 
             // FrmMainMenu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1106, 759);
+            this.ClientSize = new System.Drawing.Size(553, 395);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnModuleInfoManager);
             this.Controls.Add(this.btnStudentInfoManager);
             this.Controls.Add(this.label10);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "FrmMainMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Main Menu";
+            this.Load += new System.EventHandler(this.FrmMainMenu_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -10,6 +10,7 @@ namespace PRG282_Project_1
 {
     internal class FileHandler
     {
+        //THIS CLASS HANDLES ALL OF THE READ AND WRITE OPERATIONS TO AND FROM FILES.
         public FileHandler()
         {
 

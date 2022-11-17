@@ -8,6 +8,7 @@ namespace PRG282_Project_1
 {
     internal class LoginValidation
     {
+        //THIS CLASS VALIDATES ALL THE LOGIN INFORMATION.
 
         public bool Validate(string username, string password) 
         {

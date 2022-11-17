@@ -40,5 +40,10 @@ namespace PRG282_Project_1
         {
             Environment.Exit(0);
         }
+
+        private void FrmMainMenu_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

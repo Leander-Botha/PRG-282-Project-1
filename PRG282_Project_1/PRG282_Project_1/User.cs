@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 
 namespace PRG282_Project_1
 {
+    //THIS CLASS REPRESTENTS THE USER INFORMATION FOR THE LOGIN.
+
     internal class User
     {
         string username;

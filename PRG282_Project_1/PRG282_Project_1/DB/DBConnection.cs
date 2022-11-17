@@ -14,6 +14,8 @@ namespace PRG282_Project_1.DB
 {
     internal class DBConnection
     {
+        //THIS CLASS HANDLES ALL OF THE DATA AND DATABASE CONNECTIONS.
+
         //Data source
         private string filePath;
 
@@ -170,14 +172,15 @@ namespace PRG282_Project_1.DB
         public void DeleteModule(string moduleCode)
         {
             string deleteQuery = "DeleteModule "+moduleCode;
-
+            Sqlcon.Close();
             if (MessageBox.Show("Are you sure you want to delete data for the Module with Code: " + moduleCode + "? this cannot be undone.", "Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
             {
                 SqlCommand cmd = new SqlCommand(deleteQuery, this.Sqlcon);
 
-                executeSqlCommand(deleteQuery);
-
-                MessageBox.Show("Details for Module with the Code: " + moduleCode + " has been deleted.", "Delete");
+                //executeSqlCommand(deleteQuery);
+                
+                MessageBox.Show("Details for Module with the Code: " + moduleCode + " cannot be deleted.", "Delete", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                
             }
         }
 
@@ -217,16 +220,17 @@ namespace PRG282_Project_1.DB
 
         }
 
-        public void UpdateModules(string moduleCode, string ModuleName, int NQFlvl, int credits, string moduleDesc)
+        public void UpdateModules(string moduleCode, string ModuleName, int NQFlvl, string moduleDesc, int credits)
         {
-            string createQuery = "UPDATE tblModule SET moduleCode = @moduleCode, ModuleName = @ModuleName, NQFlvl = @nqfLvl, credits= @Credits, moduleDesc = @ModuleDesc";
+            string createQuery = "UPDATE tblModule SET moduleCode = @moduleCode, moduleName = @ModuleName, moduleNQFlevel = @nqfLvl, modulecredits= @Credits, moduleDescription = @ModuleDesc WHERE moduleCode = @moduleCode";
 
             SqlCommand cmd = new SqlCommand(createQuery, this.Sqlcon);
-
+            Sqlcon.Close();
             Sqlcon.Open();
             cmd.Parameters.AddWithValue("@moduleCode", moduleCode);
             cmd.Parameters.AddWithValue("@ModuleName", ModuleName);
             cmd.Parameters.AddWithValue("@nqfLvl", NQFlvl);
+            cmd.Parameters.AddWithValue("@Credits", credits);
             cmd.Parameters.AddWithValue("@ModuleDesc", moduleDesc);
            
            

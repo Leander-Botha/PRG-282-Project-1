@@ -20,52 +20,11 @@ namespace PRG282_Project_1
             InitializeComponent();
         }
 
-        //****Example to add to DB
-        //DataTable checkUser = new DataTable();
-        //checkUser = this.myDatabase.executeSqlCommand("SELECT * FROM tblEmployee WHERE employeeID='" + txtEmpID.Text + "' ");
-        //    if (checkUser.Rows.Count > 0)
-        //    {
-        //        MessageBox.Show("The EmployeeID is duplicated", "Warning");
-        //    }
-        //    else
-        //    {
-        //        //Insert data into database
-        //        this.myDatabase.executeSqlCommand("INSERT INTO tblEmployee ([employeeID],[employeeEmail],[employeePassword],[employeeFirstName],[employeeLastName],[employeeLevel],[employeePhoneNumber]) VALUES('" + int.Parse(txtEmpID.Text) + "','" + txtEmail.Text + "','" + txtPass.Text + "','" + txtFName.Text + "','" + txtLName.Text + "','" + txtLevel.Text + "','" + txtPhone.Text + "')");
-        //MessageBox.Show("The user is saved");
-        //load_userAccount();
-        //}
-
-
-        //****Example to update record in DB
-        // update user information
-        //string sqlcommand = "UPDATE tblEmployee SET employeeEmail='" + txtEmail.Text + "', employeePassword='" + txtPass.Text + "', employeeFirstName='" + txtFName.Text + "', employeeLastName='" + txtLName.Text + "', employeePhoneNumber='" + txtPhone.Text + "' WHERE employeeID='" + txtEmpID.Text + "' ";
-        //this.myDatabase.executeSqlCommand(sqlcommand);
-        //MessageBox.Show("The user info is updated", "Warning");
-
-
-        //****Example to delete record in DB
-        //if (MessageBox.Show("Do you want to delete the user?", "Warnning", MessageBoxButtons.YesNo) == DialogResult.Yes)
-        //    {
-        //      string sqlcommand = "DELETE FROM tblEmployee WHERE employeeID='" + txtEmpID.Text + "'";
-        //      this.myDatabase.executeSqlCommand(sqlcommand);
-        //      MessageBox.Show("The user is deleted");
-        //    }
-
 
     private void MainMenu_Load(object sender, EventArgs e)
         {
             dbc = new DBConnection();
             dgvInfo.DataSource = dbc.DisplayAll();
-
-            //string command = "SELECT moduleCode from tblModule";
-
-            //DataTable DT = dbc.executeSqlCommand(command);
-
-            //cbxModules.Items.Clear();
-            //foreach (var module in DT.AsEnumerable())
-            //{
-            //    cbxModules.Items.Add(module[0]);
-            //}
 
             DataTable DT = dbc.DisplayAllModule();
 
@@ -75,10 +34,6 @@ namespace PRG282_Project_1
                 {
                     cbxModules.Items.Add(DT.Rows[i][0]);
                 }
-                //foreach (var module in DT.AsEnumerable())
-                //{
-                //    lbDisplayModules.Items.Add(module[0]);
-                //}
             }
             cbxModules.Items.RemoveAt(0);
 
@@ -208,64 +163,6 @@ namespace PRG282_Project_1
 
         private void dgvInfo_SelectionChanged(object sender, EventArgs e)
         {
-            //if (dgvInfo.SelectedRows.Count > 0)
-            //{
-            //    txtStudentNr.Text = dgvInfo.SelectedRows[0].Cells[0].Value.ToString();
-            //    txtName.Text = dgvInfo.SelectedRows[0].Cells[1].Value.ToString();
-            //    txtSurname.Text = dgvInfo.SelectedRows[0].Cells[2].Value.ToString();
-
-            //    //string command = "Select moduleCode from tblModule inner join tblStudentModule on tblModule.moduleCode = tblStudentModule.moduleCode where studentNumber = "+ txtStudentNr.Text +"";
-
-            //    //DataTable DT = dbc.executeSqlCommand(command);
-
-            //    DataTable DT = dbc.DisplayStudentModule(dgvInfo.SelectedRows[0].Cells[0].ToString());
-            //    lbDisplayModules.Items.Clear();
-
-            //    if (DT != null)
-            //    {
-            //        for (int i = 0; i < DT.Rows.Count; i++)
-            //        {
-            //            lbDisplayModules.Items.Add(DT.Rows[i].ToString());
-            //        }
-            //        //foreach (var module in DT.AsEnumerable())
-            //        //{
-            //        //    lbDisplayModules.Items.Add(module[0]);
-            //        //}
-            //    }
-
-            //    if (dgvInfo.SelectedRows[0].Cells[4].Value.ToString() != "")
-            //    { 
-            //        picStudent.Image = (System.Drawing.Image)new ImageConverter().ConvertFrom(dgvInfo.SelectedRows[0].Cells[4].Value);
-            //    }
-            //    else
-            //    {
-            //        picStudent.Image = Properties.Resources._default;
-            //    }
-
-            //    if (dgvInfo.SelectedRows[0].Cells[3].Value.ToString() != "")
-            //    {
-            //        dtpStudent.Value = (DateTime)dgvInfo.SelectedRows[0].Cells[3].Value;
-            //    }
-
-            //    else
-            //    {
-            //        dtpStudent.Value = DateTime.Now;
-            //    }
-
-            //    if(cbxGender.Items.Contains(dgvInfo.SelectedRows[0].Cells[7].Value.ToString()))
-            //    {
-            //        cbxGender.SelectedIndex = cbxGender.Items.IndexOf(dgvInfo.SelectedRows[0].Cells[7].Value.ToString()); 
-            //    }
-            //    else
-            //    {
-            //        cbxGender.SelectedIndex = 0; 
-            //    }
-
-            //    txtPhone.Text = dgvInfo.SelectedRows[0].Cells[5].Value.ToString();
-            //    txtAddress.Text = dgvInfo.SelectedRows[0].Cells[6].Value.ToString();
-
-            //    dgvInfo.DataSource = DT;
-            //}
           
         }
 
@@ -359,11 +256,6 @@ namespace PRG282_Project_1
                 txtName.Text = dgvInfo.SelectedRows[0].Cells[1].Value.ToString();
                 txtSurname.Text = dgvInfo.SelectedRows[0].Cells[2].Value.ToString();
 
-                //string command = "Select moduleCode from tblModule inner join tblStudentModule on tblModule.moduleCode = tblStudentModule.moduleCode where studentNumber = "+ txtStudentNr.Text +"";
-
-                //DataTable DT = dbc.executeSqlCommand(command);
-
-                //DataTable DT = dbc.DisplayStudentModule(dgvInfo.SelectedRows[0].Cells[0].ToString());
                 DataTable DT = dbc.DisplayStudentModule(txtStudentNr.Text);
                 lbDisplayModules.Items.Clear();
 
@@ -373,10 +265,7 @@ namespace PRG282_Project_1
                     {
                         lbDisplayModules.Items.Add(DT.Rows[i][0]);
                     }
-                    //foreach (var module in DT.AsEnumerable())
-                    //{
-                    //    lbDisplayModules.Items.Add(module[0]);
-                    //}
+
                 }
 
                 if (dgvInfo.SelectedRows[0].Cells[4].Value.ToString() != "")

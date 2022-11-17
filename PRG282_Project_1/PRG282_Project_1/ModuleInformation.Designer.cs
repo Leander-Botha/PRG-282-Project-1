@@ -117,7 +117,9 @@
             // 
             // btnRemoveLink
             // 
-            this.btnRemoveLink.Location = new System.Drawing.Point(347, 125);
+            this.btnRemoveLink.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRemoveLink.ForeColor = System.Drawing.Color.DarkRed;
+            this.btnRemoveLink.Location = new System.Drawing.Point(356, 133);
             this.btnRemoveLink.Margin = new System.Windows.Forms.Padding(4);
             this.btnRemoveLink.Name = "btnRemoveLink";
             this.btnRemoveLink.Size = new System.Drawing.Size(100, 28);
@@ -147,7 +149,7 @@
             this.lbDisplayLinks.Location = new System.Drawing.Point(145, 61);
             this.lbDisplayLinks.Margin = new System.Windows.Forms.Padding(2);
             this.lbDisplayLinks.Name = "lbDisplayLinks";
-            this.lbDisplayLinks.Size = new System.Drawing.Size(303, 36);
+            this.lbDisplayLinks.Size = new System.Drawing.Size(303, 52);
             this.lbDisplayLinks.TabIndex = 32;
             this.lbDisplayLinks.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lbDisplayLinks_MouseClick);
             this.lbDisplayLinks.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
@@ -155,6 +157,8 @@
             // 
             // btnAddLInk
             // 
+            this.btnAddLInk.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddLInk.ForeColor = System.Drawing.Color.DarkGreen;
             this.btnAddLInk.Location = new System.Drawing.Point(373, 17);
             this.btnAddLInk.Margin = new System.Windows.Forms.Padding(4);
             this.btnAddLInk.Name = "btnAddLInk";
@@ -214,17 +218,20 @@
             // 
             // btnRead
             // 
+            this.btnRead.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRead.Location = new System.Drawing.Point(145, 467);
             this.btnRead.Margin = new System.Windows.Forms.Padding(4);
             this.btnRead.Name = "btnRead";
             this.btnRead.Size = new System.Drawing.Size(100, 28);
             this.btnRead.TabIndex = 25;
-            this.btnRead.Text = "Read";
+            this.btnRead.Text = "Read/ViewAll";
             this.btnRead.UseVisualStyleBackColor = true;
             this.btnRead.Click += new System.EventHandler(this.btnRead_Click);
             // 
             // btnDeleteModule
             // 
+            this.btnDeleteModule.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDeleteModule.ForeColor = System.Drawing.Color.Red;
             this.btnDeleteModule.Location = new System.Drawing.Point(382, 467);
             this.btnDeleteModule.Margin = new System.Windows.Forms.Padding(4);
             this.btnDeleteModule.Name = "btnDeleteModule";
@@ -236,6 +243,7 @@
             // 
             // btnUpdateModule
             // 
+            this.btnUpdateModule.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUpdateModule.Location = new System.Drawing.Point(265, 467);
             this.btnUpdateModule.Margin = new System.Windows.Forms.Padding(4);
             this.btnUpdateModule.Name = "btnUpdateModule";
@@ -266,6 +274,8 @@
             // 
             // btnCreateModule
             // 
+            this.btnCreateModule.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCreateModule.ForeColor = System.Drawing.Color.DarkGreen;
             this.btnCreateModule.Location = new System.Drawing.Point(27, 467);
             this.btnCreateModule.Margin = new System.Windows.Forms.Padding(4);
             this.btnCreateModule.Name = "btnCreateModule";
@@ -315,10 +325,11 @@
             // 
             // btnCancelModule
             // 
-            this.btnCancelModule.Location = new System.Drawing.Point(887, 511);
+            this.btnCancelModule.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancelModule.Location = new System.Drawing.Point(565, 527);
             this.btnCancelModule.Margin = new System.Windows.Forms.Padding(4);
             this.btnCancelModule.Name = "btnCancelModule";
-            this.btnCancelModule.Size = new System.Drawing.Size(100, 28);
+            this.btnCancelModule.Size = new System.Drawing.Size(463, 28);
             this.btnCancelModule.TabIndex = 22;
             this.btnCancelModule.Text = "Back";
             this.btnCancelModule.UseVisualStyleBackColor = true;
@@ -344,7 +355,7 @@
             this.pnlSearch.Location = new System.Drawing.Point(565, 60);
             this.pnlSearch.Margin = new System.Windows.Forms.Padding(4);
             this.pnlSearch.Name = "pnlSearch";
-            this.pnlSearch.Size = new System.Drawing.Size(423, 68);
+            this.pnlSearch.Size = new System.Drawing.Size(463, 68);
             this.pnlSearch.TabIndex = 14;
             // 
             // label11
@@ -363,13 +374,14 @@
             this.txtSearch.Location = new System.Drawing.Point(131, 24);
             this.txtSearch.Margin = new System.Windows.Forms.Padding(4);
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(132, 22);
+            this.txtSearch.Size = new System.Drawing.Size(196, 22);
             this.txtSearch.TabIndex = 13;
             this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
             // btnSearchModule
             // 
-            this.btnSearchModule.Location = new System.Drawing.Point(296, 19);
+            this.btnSearchModule.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSearchModule.Location = new System.Drawing.Point(344, 21);
             this.btnSearchModule.Margin = new System.Windows.Forms.Padding(4);
             this.btnSearchModule.Name = "btnSearchModule";
             this.btnSearchModule.Size = new System.Drawing.Size(100, 28);
@@ -398,10 +410,11 @@
             // 
             // btnClearFrm
             // 
-            this.btnClearFrm.Location = new System.Drawing.Point(431, 26);
+            this.btnClearFrm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClearFrm.Location = new System.Drawing.Point(398, 26);
             this.btnClearFrm.Margin = new System.Windows.Forms.Padding(4);
             this.btnClearFrm.Name = "btnClearFrm";
-            this.btnClearFrm.Size = new System.Drawing.Size(100, 28);
+            this.btnClearFrm.Size = new System.Drawing.Size(133, 28);
             this.btnClearFrm.TabIndex = 24;
             this.btnClearFrm.Text = "Clear Form";
             this.btnClearFrm.UseVisualStyleBackColor = true;

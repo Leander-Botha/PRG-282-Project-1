@@ -117,7 +117,9 @@
             // 
             // btnRemoveMod
             // 
-            this.btnRemoveMod.Location = new System.Drawing.Point(56, 86);
+            this.btnRemoveMod.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRemoveMod.ForeColor = System.Drawing.Color.Red;
+            this.btnRemoveMod.Location = new System.Drawing.Point(338, 87);
             this.btnRemoveMod.Margin = new System.Windows.Forms.Padding(4);
             this.btnRemoveMod.Name = "btnRemoveMod";
             this.btnRemoveMod.Size = new System.Drawing.Size(128, 28);
@@ -139,10 +141,12 @@
             // 
             // btnAddModule
             // 
-            this.btnAddModule.Location = new System.Drawing.Point(346, 24);
+            this.btnAddModule.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddModule.ForeColor = System.Drawing.Color.DarkGreen;
+            this.btnAddModule.Location = new System.Drawing.Point(338, 24);
             this.btnAddModule.Margin = new System.Windows.Forms.Padding(4);
             this.btnAddModule.Name = "btnAddModule";
-            this.btnAddModule.Size = new System.Drawing.Size(100, 28);
+            this.btnAddModule.Size = new System.Drawing.Size(128, 28);
             this.btnAddModule.TabIndex = 26;
             this.btnAddModule.Text = "Add Module";
             this.btnAddModule.UseVisualStyleBackColor = true;
@@ -153,10 +157,10 @@
             this.cbxModules.FormattingEnabled = true;
             this.cbxModules.Items.AddRange(new object[] {
             "None"});
-            this.cbxModules.Location = new System.Drawing.Point(193, 27);
+            this.cbxModules.Location = new System.Drawing.Point(141, 27);
             this.cbxModules.Margin = new System.Windows.Forms.Padding(4);
             this.cbxModules.Name = "cbxModules";
-            this.cbxModules.Size = new System.Drawing.Size(132, 24);
+            this.cbxModules.Size = new System.Drawing.Size(184, 24);
             this.cbxModules.TabIndex = 18;
             this.cbxModules.SelectedIndexChanged += new System.EventHandler(this.cbxModules_SelectedIndexChanged);
             // 
@@ -164,25 +168,28 @@
             // 
             this.lbDisplayModules.FormattingEnabled = true;
             this.lbDisplayModules.ItemHeight = 16;
-            this.lbDisplayModules.Location = new System.Drawing.Point(197, 74);
+            this.lbDisplayModules.Location = new System.Drawing.Point(23, 72);
             this.lbDisplayModules.Margin = new System.Windows.Forms.Padding(2);
             this.lbDisplayModules.Name = "lbDisplayModules";
-            this.lbDisplayModules.Size = new System.Drawing.Size(256, 52);
+            this.lbDisplayModules.Size = new System.Drawing.Size(302, 52);
             this.lbDisplayModules.TabIndex = 25;
             // 
             // btnRead
             // 
-            this.btnRead.Location = new System.Drawing.Point(152, 700);
+            this.btnRead.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRead.Location = new System.Drawing.Point(149, 709);
             this.btnRead.Margin = new System.Windows.Forms.Padding(4);
             this.btnRead.Name = "btnRead";
-            this.btnRead.Size = new System.Drawing.Size(92, 44);
+            this.btnRead.Size = new System.Drawing.Size(103, 28);
             this.btnRead.TabIndex = 24;
-            this.btnRead.Text = "Read (Display All)";
+            this.btnRead.Text = "Read/ViewAll";
             this.btnRead.UseVisualStyleBackColor = true;
             this.btnRead.Click += new System.EventHandler(this.btnRead_Click);
             // 
             // btnDelete
             // 
+            this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDelete.ForeColor = System.Drawing.Color.Red;
             this.btnDelete.Location = new System.Drawing.Point(401, 708);
             this.btnDelete.Margin = new System.Windows.Forms.Padding(4);
             this.btnDelete.Name = "btnDelete";
@@ -194,6 +201,7 @@
             // 
             // btnUpdate
             // 
+            this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUpdate.Location = new System.Drawing.Point(275, 709);
             this.btnUpdate.Margin = new System.Windows.Forms.Padding(4);
             this.btnUpdate.Name = "btnUpdate";
@@ -208,10 +216,10 @@
             this.picStudent.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.picStudent.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picStudent.Image = global::PRG282_Project_1.Properties.Resources._default;
-            this.picStudent.Location = new System.Drawing.Point(205, 187);
+            this.picStudent.Location = new System.Drawing.Point(250, 182);
             this.picStudent.Margin = new System.Windows.Forms.Padding(4);
             this.picStudent.Name = "picStudent";
-            this.picStudent.Size = new System.Drawing.Size(165, 93);
+            this.picStudent.Size = new System.Drawing.Size(174, 93);
             this.picStudent.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picStudent.TabIndex = 21;
             this.picStudent.TabStop = false;
@@ -222,7 +230,7 @@
             this.txtName.Location = new System.Drawing.Point(219, 83);
             this.txtName.Margin = new System.Windows.Forms.Padding(4);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(132, 22);
+            this.txtName.Size = new System.Drawing.Size(243, 22);
             this.txtName.TabIndex = 20;
             // 
             // label9
@@ -248,6 +256,8 @@
             // 
             // btnCreate
             // 
+            this.btnCreate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCreate.ForeColor = System.Drawing.Color.DarkGreen;
             this.btnCreate.Location = new System.Drawing.Point(25, 708);
             this.btnCreate.Margin = new System.Windows.Forms.Padding(4);
             this.btnCreate.Name = "btnCreate";
@@ -266,7 +276,7 @@
             this.cbxGender.Location = new System.Drawing.Point(219, 364);
             this.cbxGender.Margin = new System.Windows.Forms.Padding(4);
             this.cbxGender.Name = "cbxGender";
-            this.cbxGender.Size = new System.Drawing.Size(132, 24);
+            this.cbxGender.Size = new System.Drawing.Size(243, 24);
             this.cbxGender.TabIndex = 17;
             // 
             // label7
@@ -307,7 +317,7 @@
             this.txtPhone.Location = new System.Drawing.Point(219, 433);
             this.txtPhone.Margin = new System.Windows.Forms.Padding(4);
             this.txtPhone.Name = "txtPhone";
-            this.txtPhone.Size = new System.Drawing.Size(132, 22);
+            this.txtPhone.Size = new System.Drawing.Size(243, 22);
             this.txtPhone.TabIndex = 12;
             // 
             // label4
@@ -326,7 +336,7 @@
             this.txtStudentNr.Location = new System.Drawing.Point(219, 33);
             this.txtStudentNr.Margin = new System.Windows.Forms.Padding(4);
             this.txtStudentNr.Name = "txtStudentNr";
-            this.txtStudentNr.Size = new System.Drawing.Size(132, 22);
+            this.txtStudentNr.Size = new System.Drawing.Size(243, 22);
             this.txtStudentNr.TabIndex = 11;
             // 
             // label3
@@ -345,7 +355,7 @@
             this.txtAddress.Location = new System.Drawing.Point(219, 490);
             this.txtAddress.Margin = new System.Windows.Forms.Padding(4);
             this.txtAddress.Name = "txtAddress";
-            this.txtAddress.Size = new System.Drawing.Size(132, 22);
+            this.txtAddress.Size = new System.Drawing.Size(243, 22);
             this.txtAddress.TabIndex = 10;
             // 
             // label2
@@ -375,17 +385,19 @@
             this.txtSurname.Location = new System.Drawing.Point(219, 132);
             this.txtSurname.Margin = new System.Windows.Forms.Padding(4);
             this.txtSurname.Name = "txtSurname";
-            this.txtSurname.Size = new System.Drawing.Size(132, 22);
+            this.txtSurname.Size = new System.Drawing.Size(243, 22);
             this.txtSurname.TabIndex = 8;
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(1162, 760);
+            this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancel.Location = new System.Drawing.Point(625, 775);
             this.btnCancel.Margin = new System.Windows.Forms.Padding(4);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(100, 28);
+            this.btnCancel.Size = new System.Drawing.Size(672, 28);
             this.btnCancel.TabIndex = 22;
-            this.btnCancel.Text = "Cancel";
+            this.btnCancel.Text = "Back";
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
@@ -402,10 +414,12 @@
             // 
             // btnSearchStudent
             // 
-            this.btnSearchStudent.Location = new System.Drawing.Point(296, 32);
+            this.btnSearchStudent.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSearchStudent.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearchStudent.Location = new System.Drawing.Point(485, 21);
             this.btnSearchStudent.Margin = new System.Windows.Forms.Padding(4);
             this.btnSearchStudent.Name = "btnSearchStudent";
-            this.btnSearchStudent.Size = new System.Drawing.Size(100, 28);
+            this.btnSearchStudent.Size = new System.Drawing.Size(183, 37);
             this.btnSearchStudent.TabIndex = 12;
             this.btnSearchStudent.Text = "Search Student";
             this.btnSearchStudent.UseVisualStyleBackColor = true;
@@ -419,14 +433,14 @@
             this.pnlSearch.Location = new System.Drawing.Point(625, 52);
             this.pnlSearch.Margin = new System.Windows.Forms.Padding(4);
             this.pnlSearch.Name = "pnlSearch";
-            this.pnlSearch.Size = new System.Drawing.Size(423, 86);
+            this.pnlSearch.Size = new System.Drawing.Size(672, 86);
             this.pnlSearch.TabIndex = 13;
             // 
             // label11
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Dubai", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(16, 35);
+            this.label11.Location = new System.Drawing.Point(17, 27);
             this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(133, 29);
@@ -436,10 +450,11 @@
             // 
             // txtSearch
             // 
-            this.txtSearch.Location = new System.Drawing.Point(155, 32);
+            this.txtSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSearch.Location = new System.Drawing.Point(167, 33);
             this.txtSearch.Margin = new System.Windows.Forms.Padding(4);
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(132, 22);
+            this.txtSearch.Size = new System.Drawing.Size(310, 23);
             this.txtSearch.TabIndex = 13;
             this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
@@ -453,17 +468,18 @@
             this.dgvInfo.ReadOnly = true;
             this.dgvInfo.RowHeadersWidth = 82;
             this.dgvInfo.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvInfo.Size = new System.Drawing.Size(672, 561);
+            this.dgvInfo.Size = new System.Drawing.Size(672, 585);
             this.dgvInfo.TabIndex = 14;
             this.dgvInfo.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvInfo_CellClick);
             this.dgvInfo.SelectionChanged += new System.EventHandler(this.dgvInfo_SelectionChanged);
             // 
             // btnClear
             // 
-            this.btnClear.Location = new System.Drawing.Point(472, 32);
+            this.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClear.Location = new System.Drawing.Point(408, 32);
             this.btnClear.Margin = new System.Windows.Forms.Padding(4);
             this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(100, 28);
+            this.btnClear.Size = new System.Drawing.Size(164, 28);
             this.btnClear.TabIndex = 23;
             this.btnClear.Text = "Clear Form";
             this.btnClear.UseVisualStyleBackColor = true;

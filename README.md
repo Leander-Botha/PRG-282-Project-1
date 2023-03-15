@@ -1,6 +1,6 @@
 # PRG282-Project-1
 
-A multilayered C# application that allows for the management of student data. It uses SQL Server and has Create, Read, Update and delete Functionality. The languages/ scripting languages used in this project are HTML, JavaScript and CSS bootstrap. 
+A multilayered C# application that allows for the management of student data. It uses SQL Server and has Create, Read, Update and delete Functionality. 
 
 Workload Distribution: 
 
